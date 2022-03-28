@@ -69,9 +69,15 @@ and click on your preferred editor.
 
 ## Previews
 
-![greenery](previews/greenery.svg) ![groovy](previews/groovy.svg) ![ice](previews/ice.svg)
-![minimal-dark](previews/minimal-dark.svg) ![nordic](previews/nordic.svg) ![pale](previews/pale.svg)
-![paperwhite](previews/paperwhite.svg) ![spice](previews/spice.svg) ![sublunary](previews/sublunary.svg)
+![blue-in-green](previews/blue-in-green.svg)
+![greenery](previews/greenery.svg)
+![groovy](previews/groovy.svg)
+![ice](previews/ice.svg)
+![minimal-dark](previews/minimal-dark.svg)
+![nordic](previews/nordic.svg)
+![pale](previews/pale.svg)
+![paperwhite](previews/paperwhite.svg)
+![spice](previews/spice.svg) ![sublunary](previews/sublunary.svg)
 
 
 ## Reasoning
