@@ -69,32 +69,9 @@ and click on your preferred editor.
 
 ## Previews
 
-### Greenery
-![greenery](previews/greenery.svg)
-
-### Groovy (based on Gruvbox)
-![groovy](previews/groovy.svg)
-
-### Ice (based on Iceberg)
-![ice](previews/ice.svg)
-
-### Minimal Dark (based on Simple Dark)
-![minimal-dark](previews/minimal-dark.svg)
-
-### Nordic (based on Nord)
-![nordic](previews/nordic.svg)
-
-### Pale (based on Palenight)
-![pale](previews/pale.svg)
-
-### Paperwhite
-![paperwhite](previews/paperwhite.svg)
-
-### Spice
-![spice](previews/spice.svg)
-
-### Sublunary
-![sublunary](previews/sublunary.svg)
+![greenery](previews/greenery.svg) ![groovy](previews/groovy.svg) ![ice](previews/ice.svg)
+![minimal-dark](previews/minimal-dark.svg) ![nordic](previews/nordic.svg) ![pale](previews/pale.svg)
+![paperwhite](previews/paperwhite.svg) ![spice](previews/spice.svg) ![sublunary](previews/sublunary.svg)
 
 
 ## Reasoning
