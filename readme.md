@@ -70,6 +70,7 @@ and click on your preferred editor.
 ## Previews
 
 ![blue-in-green](previews/blue-in-green.svg)
+![fusion](previews/fusion.svg)
 ![greenery](previews/greenery.svg)
 ![groovy](previews/groovy.svg)
 ![ice](previews/ice.svg)
