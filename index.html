@@ -362,10 +362,7 @@
 
          picker.addEventListener("change", (event) => {
             event.preventDefault();
-
-            let json_str = JSON.stringify(theme_colors);
-            console.log("Updating local storage:", json_str);
-            localStorage.setItem(storage_id, JSON.stringify(theme_colors));
+            update_scheme_from_theme();
          })
 
          for (let color_id in theme_colors) {

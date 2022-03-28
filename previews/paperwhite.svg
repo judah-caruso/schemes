@@ -8,7 +8,7 @@
       #c4 { fill: #8A7A5C; } <!-- Constants, Strings -->
       #c5 { fill: #8A7A5C; } <!-- Pre-Processor, Special -->
       #c6 { fill: #BA6E5E; } <!-- Errors -->
-      #c7 { fill: #B7B0A4; } <!-- Comments --> 
+      #c7 { fill: #8A7A5C; } <!-- Comments --> 
    </style>
 
    <rect width="288" height="140" id="c0"></rect>   
