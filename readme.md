@@ -52,6 +52,11 @@ A scheme file (Nordic):
 
 ```
 
+How it looks:
+
+![nordic](previews/nordic.svg)
+
+
 To edit a theme, simply modify the file by hand or drag and drop it into [the editor](https://judahcaruso.com/schemes).
 
 
