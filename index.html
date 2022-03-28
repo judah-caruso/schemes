@@ -82,10 +82,10 @@
       </div>
 
       <div id="exports">
-         <button disabled onclick="export_theme(0)">Vim</button>
+         <button onclick="export_theme(3)">Lite</button>
          <button onclick="export_theme(1)">Sublime Text</button>
+         <button disabled onclick="export_theme(0)">Vim</button>
          <button disabled onclick="export_theme(2)">VS Code</button>
-         <button disabled onclick="export_theme(3)">Lite</button>
       </div>
 
       <div id="preview">
@@ -267,7 +267,18 @@
 
             // Lite
             case 3: {
+               let template = atob("bG9jYWwgc3R5bGUgID0gcmVxdWlyZSAiY29yZS5zdHlsZSIKbG9jYWwgY29tbW9uID0gcmVxdWlyZSAiY29yZS5jb21tb24iCgpsb2NhbCBzY2hlbWUgPSB7CioqVkFSSUFCTEVTKioKfQoKc3R5bGUuYmFja2dyb3VuZCAgICAgPSBzY2hlbWUuYzAKc3R5bGUuYmFja2dyb3VuZDIgICAgPSBzY2hlbWUuYzAgCnN0eWxlLmJhY2tncm91bmQzICAgID0gc2NoZW1lLmMwIApzdHlsZS50ZXh0ICAgICAgICAgICA9IHNjaGVtZS5jMQpzdHlsZS5jYXJldCAgICAgICAgICA9IHNjaGVtZS5jMQpzdHlsZS5hY2NlbnQgICAgICAgICA9IHNjaGVtZS5jMwpzdHlsZS5kaW0gICAgICAgICAgICA9IHNjaGVtZS5jMwpzdHlsZS5kaXZpZGVyICAgICAgICA9IHNjaGVtZS5jMApzdHlsZS5zZWxlY3Rpb24gICAgICA9IHNjaGVtZS5jNwpzdHlsZS5saW5lX251bWJlciAgICA9IHNjaGVtZS5jMQpzdHlsZS5saW5lX251bWJlcjIgICA9IHNjaGVtZS5jMwpzdHlsZS5saW5lX2hpZ2hsaWdodCA9IHNjaGVtZS5jMApzdHlsZS5zY3JvbGxiYXIgICAgICA9IHNjaGVtZS5jMQpzdHlsZS5zY3JvbGxiYXIyICAgICA9IHNjaGVtZS5jMwoKc3R5bGUuc3ludGF4WyJub3JtYWwiXSAgID0gc2NoZW1lLmMxCnN0eWxlLnN5bnRheFsic3ltYm9sIl0gICA9IHNjaGVtZS5jMQpzdHlsZS5zeW50YXhbImNvbW1lbnQiXSAgPSBzY2hlbWUuYzcKc3R5bGUuc3ludGF4WyJrZXl3b3JkIl0gID0gc2NoZW1lLmMzCnN0eWxlLnN5bnRheFsia2V5d29yZDIiXSA9IHNjaGVtZS5jMgpzdHlsZS5zeW50YXhbIm51bWJlciJdICAgPSBzY2hlbWUuYzQKc3R5bGUuc3ludGF4WyJsaXRlcmFsIl0gID0gc2NoZW1lLmM0CnN0eWxlLnN5bnRheFsic3RyaW5nIl0gICA9IHNjaGVtZS5jNApzdHlsZS5zeW50YXhbIm9wZXJhdG9yIl0gPSBzY2hlbWUuYzEKc3R5bGUuc3ludGF4WyJmdW5jdGlvbiJdID0gc2NoZW1lLmMzCg==");
+
+               let var_str = "";
+               for (let id in theme_colors) {
+                  var_str += `${" ".repeat(2)}${id} = { common.color "${theme_colors[id]}" },\n`;
+               }
+
+               var_str  = var_str.trimRight();
+               template = template.replace("**VARIABLES**", var_str);
+
                console.log("Exporting Lite theme...");
+               copy_to_clipboard("Lite Theme", template);
             } break;
          }
       }
