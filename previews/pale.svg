@@ -1,0 +1,24 @@
+<svg width='288px' height='140px' xmlns='http://www.w3.org/2000/svg' baseProfile='full' version='1.1' >
+   <title>Palenight by Judah Caruso</title>
+   <style>
+      #c0 { fill: #292D3E; } <!-- Background -->
+      #c1 { fill: #959DCB; } <!-- Foreground, Operators --> 
+      #c2 { fill: #89DDFF; } <!-- Types --> 
+      #c3 { fill: #82AAFF; } <!-- Procedures, Keywords --> 
+      #c4 { fill: #C3E88D; } <!-- Constants, Strings -->
+      #c5 { fill: #C792EA; } <!-- Pre-Processor, Special -->
+      #c6 { fill: #FF0000; } <!-- Errors -->
+      #c7 { fill: #676E95; } <!-- Comments --> 
+   </style>
+
+   <rect width='288' height='140' id='c0'></rect>   
+   <text x='10' y='20' style="font-family: monospace" id="c1">
+      <tspan x='10'><tspan id='c5'>&#35;include</tspan> <tspan id='c4'>&lt;stdio.h&gt;</tspan></tspan>
+      <tspan x='10' dy='2em'><tspan id='c3'>typedef</tspan> <tspan id='c2'>struct</tspan> &#123; <tspan id='c2'>float</tspan> x&#44; y&#59; &#125; Point&#59;</tspan>
+      <tspan x='10' dy='2em'><tspan id='c2'>int</tspan> <tspan id='c3'>main</tspan>&#40;<tspan id='c2'>int</tspan> <tspan>argc</tspan>&#44; <tspan id='c2'>char</tspan>&#42; <tspan>argv</tspan>&#91;&#93;&#41;</tspan>
+      <tspan x='10' dy='1em'>&#123;</tspan>
+      <tspan x='25' dy='1em'><tspan><tspan id='c3'>if</tspan> &#40;<tspan id='c4'>1</tspan>&#41;</tspan> printf&#40;<tspan id='c4'>"Hello&#44; World!<tspan id='c5'>\n</tspan>"</tspan>&#41;&#59;</tspan>
+      <tspan x='25' dy='1em'><tspan id='c3'>return</tspan> <tspan id='c4'>0</tspan>&#59; <tspan id='c7'>// This is a comment</tspan>
+      </tspan><tspan x='10' dy='1em'>&#125;</tspan>
+   </text>
+</svg>
