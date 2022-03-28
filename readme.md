@@ -75,14 +75,17 @@ and click on your preferred editor.
 ### Ice (based on Iceberg)
 ![ice](previews/ice.svg)
 
+### Minimal Dark (based on Simple Dark)
+![minimal-dark](previews/minimal-dark.svg)
+
 ### Nordic (based on Nord)
 ![nordic](previews/nordic.svg)
 
 ### Pale (based on Palenight)
 ![pale](previews/pale.svg)
 
-### Minimal Dark (based on Simple Dark)
-![minimal-dark](previews/minimal-dark.svg)
+### Paperwhite
+![paperwhite](previews/paperwhite.svg)
 
 
 ## Reasoning
