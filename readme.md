@@ -79,6 +79,7 @@ and click on your preferred editor.
 ![ice](previews/ice.svg)
 ![minimal-dark](previews/minimal-dark.svg)
 ![nordic](previews/nordic.svg)
+![one](previews/one.svg)
 ![pale](previews/pale.svg)
 ![paperwhite](previews/paperwhite.svg)
 ![spice](previews/spice.svg) ![sublunary](previews/sublunary.svg)
