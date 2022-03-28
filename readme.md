@@ -69,6 +69,9 @@ and click on your preferred editor.
 
 ## Previews
 
+### Greenery
+![greenery](previews/greenery.svg)
+
 ### Groovy (based on Gruvbox)
 ![groovy](previews/groovy.svg)
 
@@ -86,6 +89,12 @@ and click on your preferred editor.
 
 ### Paperwhite
 ![paperwhite](previews/paperwhite.svg)
+
+### Spice
+![spice](previews/spice.svg)
+
+### Sublunary
+![sublunary](previews/sublunary.svg)
 
 
 ## Reasoning

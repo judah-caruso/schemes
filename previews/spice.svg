@@ -1,14 +1,14 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Paperwhite by Judah Caruso</title>
+   <title>Spice by Judah Caruso</title>
    <style>
-      #c0 { fill: #E0DFDC; } <!-- Background -->
-      #c1 { fill: #707070; } <!-- Foreground, Operators --> 
-      #c2 { fill: #707070; } <!-- Types --> 
-      #c3 { fill: #707070; } <!-- Procedures, Keywords --> 
-      #c4 { fill: #8A7A5C; } <!-- Constants, Strings -->
-      #c5 { fill: #8A7A5C; } <!-- Pre-Processor, Special -->
-      #c6 { fill: #BA6E5E; } <!-- Errors -->
-      #c7 { fill: #8A7A5C; } <!-- Comments --> 
+      #c0 { fill: #0C0C0C; } <!-- Background -->
+      #c1 { fill: #BAB5AB; } <!-- Foreground, Operators --> 
+      #c2 { fill: #BC795C; } <!-- Types --> 
+      #c3 { fill: #BCBCBC; } <!-- Procedures, Keywords --> 
+      #c4 { fill: #BC795C; } <!-- Constants, Strings -->
+      #c5 { fill: #585858; } <!-- Pre-Processor, Special -->
+      #c6 { fill: #8A8A8A; } <!-- Errors -->
+      #c7 { fill: #585858; } <!-- Comments --> 
    </style>
 
    <rect width="288" height="140" id="c0"></rect>   
