@@ -151,7 +151,7 @@
 
       const storage_id = "theme";
 
-      const update_from_theme = () => {
+      const update_theme_from_scheme = () => {
          const css_rules = document.styleSheets[1].cssRules;
          for (let i = 0; i < css_rules.length; i++) {
             css_rules[i].style.transition = "0.4s";
@@ -174,7 +174,25 @@
          localStorage.setItem(storage_id, JSON.stringify(theme_colors));
       }
 
-      const read_theme = (file) => {
+      const update_scheme_from_theme = () => {
+         let theme_style = theme_preview.getElementsByTagName("style")[0];
+         let new_html    = theme_style.innerHTML.split("\n");
+
+         for (let i in new_html) {
+            let line = new_html[i];
+            for (let id in theme_colors) {
+               if (line.includes(`#${id}`)) {
+                  new_html[i] = line.replace(/[#][0-9A-Fa-f]{6}/i, theme_colors[id]);
+                  break;
+               }
+            }
+         }
+
+         theme_style.innerHTML = new_html.join("\n");
+         update_theme_from_scheme();
+      }
+
+      const read_scheme = (file) => {
          const reader = new FileReader();
          reader.onload = (event) => {
             const content = event.target.result;
@@ -182,16 +200,16 @@
 
             try {
                const style_element   = svg.getElementsByTagName("style")[0];
-               const theme_style     = theme_preview.getElementsByTagName("style")[0];
+               let   theme_style     = theme_preview.getElementsByTagName("style")[0];
                theme_style.innerHTML = style_element.innerHTML;
 
-               update_from_theme();
+               update_theme_from_scheme();
             } catch(err) {
-               console.warn(`'${file.name}' is an invalid theme:`, err)
+               console.warn(`'${file.name}' is an invalid scheme:`, err)
             }
          };
 
-         console.log(`Opening theme: '${file.name}'`);
+         console.log(`Opening scheme: '${file.name}'`);
          reader.readAsText(file, "UTF-8");
       }
 
@@ -201,24 +219,14 @@
          text.innerHTML = str;
       }
 
-      const update_page = () => {
-         document.body.style.backgroundColor = theme_colors.c0;
-
-         for (let id in theme_colors) {
-            let element = document.getElementById(id);
-            element.style.setProperty("background-color", theme_colors[id]);
-         }
-      }
-
-      const update_color = (id, color) => {
+      const modify_color = (id, color) => {
          theme_colors[id] = color;
 
-         const css_rules = document.styleSheets[1].cssRules;
+         let css_rules = document.styleSheets[1].cssRules;
          for (let i = 0; i < css_rules.length; i++) {
-            let rule = css_rules[i];
-            if (rule.selectorText === `#${id}`) {
-               rule.style.setProperty("fill", color);
-               rule.style.setProperty("background", color);
+            if (css_rules[i].selectorText === `#${id}`) {
+               css_rules[i].style.setProperty("fill", color);
+               css_rules[i].style.setProperty("background", color);
                break;
             }
          }
@@ -331,7 +339,7 @@
 
          const file = event.dataTransfer.files[0];
          if (file.name.indexOf(".svg") > -1) {
-            read_theme(file);
+            read_scheme(file);
          }
          else {
             console.warn(`'${file.name}' was not a valid theme file!`);
@@ -349,7 +357,7 @@
          picker.setAttribute("type", "color");
          picker.setAttribute("id", "color-picker");
          picker.addEventListener("input", (event) => {
-            update_color(last_clicked, event.target.value);
+            modify_color(last_clicked, event.target.value);
          })
 
          picker.addEventListener("change", (event) => {
@@ -412,12 +420,10 @@
          if (previous_theme) {
             console.log("Reading previous theme from local storage...");
             theme_colors = JSON.parse(previous_theme);
-            for (let id in theme_colors) {
-               update_color(id, theme_colors[id]);
-            }
+            update_scheme_from_theme();
          }
          else {
-            update_from_theme();
+            update_theme_from_scheme();
          }
 
       }, false);

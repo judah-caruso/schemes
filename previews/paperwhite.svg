@@ -1,14 +1,14 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Paperwhite by Judah Caruso</title>
+   <title>Color Scheme by Person</title>
    <style>
-      #c0 { fill: #161820; } <!-- Background -->
-      #c1 { fill: #C6C8D0; } <!-- Foreground, Operators --> 
-      #c2 { fill: #89B8C2; } <!-- Types --> 
-      #c3 { fill: #84A0C6; } <!-- Procedures, Keywords --> 
-      #c4 { fill: #84A0C6; } <!-- Constants, Strings -->
-      #c5 { fill: #B4BE82; } <!-- Pre-Processor, Special -->
-      #c6 { fill: #D47D7A; } <!-- Errors -->
-      #c7 { fill: #6B7082; } <!-- Comments --> 
+      #c0 { fill: #E0DFDC; } <!-- Background -->
+      #c1 { fill: #707070; } <!-- Foreground, Operators --> 
+      #c2 { fill: #707070; } <!-- Types --> 
+      #c3 { fill: #707070; } <!-- Procedures, Keywords --> 
+      #c4 { fill: #8A7A5C; } <!-- Constants, Strings -->
+      #c5 { fill: #8A7A5C; } <!-- Pre-Processor, Special -->
+      #c6 { fill: #BA6E5E; } <!-- Errors -->
+      #c7 { fill: #B7B0A4; } <!-- Comments --> 
    </style>
 
    <rect width="288" height="140" id="c0"></rect>   
