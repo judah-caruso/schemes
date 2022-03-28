@@ -69,7 +69,9 @@ and click on your preferred editor.
 
 ## Previews
 
+![andromeda](previews/andromeda.svg)
 ![blue-in-green](previews/blue-in-green.svg)
+![fond](previews/fond.svg)
 ![fusion](previews/fusion.svg)
 ![greenery](previews/greenery.svg)
 ![groovy](previews/groovy.svg)
