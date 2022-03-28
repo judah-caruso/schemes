@@ -199,9 +199,13 @@
             const svg     = new DOMParser().parseFromString(content, "text/html");
 
             try {
+               const title_element   = svg.getElementsByTagName("title")[0];
                const style_element   = svg.getElementsByTagName("style")[0];
                let   theme_style     = theme_preview.getElementsByTagName("style")[0];
+               let   theme_title     = theme_preview.getElementsByTagName("title")[0];
+
                theme_style.innerHTML = style_element.innerHTML;
+               theme_title.innerHTML = title_element.innerHTML;
 
                update_theme_from_scheme();
             } catch(err) {
