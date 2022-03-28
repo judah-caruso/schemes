@@ -43,6 +43,9 @@
       }
 
       #color-picker {
+         position   : absolute;
+         width      : 0;
+         height     : 0;
          visibility : hidden;
       }
 
@@ -121,6 +124,7 @@
       let theme_svg     = theme_preview.getElementsByTagName("svg")[0];
       let editor        = document.getElementById("editor");
 
+
       let theme_colors = {
          c0: "#000",
          c1: "#000",
@@ -145,6 +149,8 @@
          python: "PHRzcGFuIHg9JzEwJz48dHNwYW4gaWQ9J2M1Jz5mcm9tPC90c3Bhbj4gbWF0aCA8dHNwYW4gaWQ9J2M1Jz5pbXBvcnQ8L3RzcGFuPiAqPC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScyZW0nPjx0c3BhbiBpZD0nYzMnPmNsYXNzPC90c3Bhbj4gUG9pbnQ6IDx0c3BhbiBpZD0nYzcnPiMgVGhpcyBpcyBhIGNvbW1lbnQ8L3RzcGFuPjwvdHNwYW4+PHRzcGFuIHg9JzI1JyBkeT0nMWVtJz54ID0gPHRzcGFuIGlkPSdjNCc+MC4wPC90c3Bhbj48L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+eSA9IDx0c3BhbiBpZD0nYzQnPjAuMDwvdHNwYW4+PC90c3Bhbj48dHNwYW4geD0nMjUnIGR5PScyZW0nPjx0c3BhbiBpZD0nYzMnPmRlZjwvdHNwYW4+IDx0c3BhbiBpZD0nYzMnPl9faW5pdF9fPC90c3Bhbj4oc2VsZiwgeCwgeSk6PC90c3Bhbj48dHNwYW4geD0nNDAnIGR5PScxZW0nPnNlbGYueCA9IHg8L3RzcGFuPjx0c3BhbiB4PSc0MCcgZHk9JzFlbSc+c2VsZi55ID0geTwvdHNwYW4+Cg==",
       }; 
 
+      const storage_id = "theme";
+
       const update_from_theme = () => {
          const css_rules = document.styleSheets[1].cssRules;
          for (let i = 0; i < css_rules.length; i++) {
@@ -162,6 +168,10 @@
             css_rules[i].style.setProperty("background", hex);
             theme_colors[`c${i}`] = hex;
          }
+
+         let json_str = JSON.stringify(theme_colors);
+         console.log("Updating local storage:", json_str);
+         localStorage.setItem(storage_id, JSON.stringify(theme_colors));
       }
 
       const read_theme = (file) => {
@@ -331,6 +341,14 @@
             update_color(last_clicked, event.target.value);
          })
 
+         picker.addEventListener("change", (event) => {
+            event.preventDefault();
+
+            let json_str = JSON.stringify(theme_colors);
+            console.log("Updating local storage:", json_str);
+            localStorage.setItem(storage_id, JSON.stringify(theme_colors));
+         })
+
          for (let color_id in theme_colors) {
             let element = document.createElement("span");
             element.setAttribute("class", "picker");
@@ -368,6 +386,8 @@
 
             element.addEventListener("click", (event) => {
                last_clicked = color_id;
+               picker.style.setProperty("top" , `${event.y}px`);
+               picker.style.setProperty("left", `${event.x}px`);
                picker.value = theme_colors[color_id];
                picker.click();
             })
@@ -375,9 +395,20 @@
             editor.appendChild(element);
          }
 
-         editor.appendChild(picker);
+         document.body.appendChild(picker);
 
-         update_from_theme();
+         let previous_theme = localStorage.getItem(storage_id);
+         if (previous_theme) {
+            console.log("Reading previous theme from local storage...");
+            theme_colors = JSON.parse(previous_theme);
+            for (let id in theme_colors) {
+               update_color(id, theme_colors[id]);
+            }
+         }
+         else {
+            update_from_theme();
+         }
+
       }, false);
    </script>
 </body>
