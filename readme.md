@@ -1,16 +1,16 @@
 ## Previews
 
 ### Groovy (based on Gruvbox)
-![groovy](themes/groovy.svg)
+![groovy](previews/groovy.svg)
 
 ### Ice (based on Iceberg)
-![ice](themes/ice.svg)
+![ice](previews/ice.svg)
 
 ### Nordic (based on Nord)
-![nordic](themes/nordic.svg)
+![nordic](previews/nordic.svg)
 
 ### Pale (based on Palenight)
-![pale](themes/pale.svg)
+![pale](previews/pale.svg)
 
 ### Minimal Dark (based on Simple Dark)
-![minimal-dark](themes/minimal-dark.svg)
+![minimal-dark](previews/minimal-dark.svg)
