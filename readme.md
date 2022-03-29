@@ -89,8 +89,7 @@ and click on your preferred editor.
 
 ## Ecosystem
 
-If you've written something that uses Schemes or have written a library, add
-it below and submit a pull request!
+If you've written something that uses Schemes, add it below and submit a pull request!
 
 ### Libraries
 
