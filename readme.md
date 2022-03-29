@@ -87,6 +87,16 @@ and click on your preferred editor.
 ![spice](previews/spice.svg) ![sublunary](previews/sublunary.svg)
 
 
+## Ecosystem
+
+If you've written something that uses Schemes or have written a library, add
+it below and submit a pull request!
+
+### Libraries
+
+- [scheme.jai](https://github.com/judah-caruso/scheme.jai) - Jai library for working with schemes
+
+
 ## Reasoning
 
 Porting color schemes between editors is often a time consuming and inconsistent
@@ -95,7 +105,7 @@ color scheme creators end up designing their own frameworks to specify which
 colors map to which syntax groups within any/all editors. However, even with
 frameworks in place, most ports are still rough approximations of the original.
 
-The idea behind schemes is to provide a simple (limited palette) format that
+The idea behind Schemes is to provide a simple (limited palette) format that
 maps consistently between editors and can be converted automatically.
 
 As syntax groups of programming languages are already consistent (identifiers, keywords, constants, etc.),
