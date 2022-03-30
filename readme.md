@@ -95,6 +95,7 @@ If you've written something that uses Schemes, add it below and submit a pull re
 
 - [schemes.jai](https://github.com/judah-caruso/schemes.jai) - Jai library for working with Schemes
 - [schemes.go](https://github.com/judah-caruso/schemes.go) - Go library for working with Schemes
+- [schemes.lua](https://github.com/judah-caruso/schemes.lua) - Lua53+ library for working with Schemes
 
 
 ## Reasoning
