@@ -69,29 +69,37 @@ and click on your preferred editor.
 
 ## Previews
 
-![andromeda](previews/andromeda.svg)
-![blue-in-green](previews/blue-in-green.svg)
-![EX](previews/EX.svg)
-![EY](previews/EY.svg)
-![fond](previews/fond.svg)
-![fusion](previews/fusion.svg)
-![greenery](previews/greenery.svg)
-![groovy](previews/groovy.svg)
-![hub-dark](previews/hub-dark.svg)
-![hub-dim](previews/hub-dim.svg)
+### Light
+
 ![hub-light](previews/hub-light.svg)
-![ice](previews/ice.svg)
-![minimal-dark](previews/minimal-dark.svg)
-![nordic](previews/nordic.svg)
-![one](previews/one.svg)
-![pale](previews/pale.svg)
-![paperwhite](previews/paperwhite.svg)
-![redline](previews/redline.svg)
-![redline-dim](previews/redline-dim.svg)
-![spice](previews/spice.svg)
-![sublunary](previews/sublunary.svg)
-![to-you](previews/to-you.svg)
 ![utopian](previews/utopian.svg)
+![paperwhite](previews/paperwhite.svg)
+
+
+### Dark
+
+![nordic](previews/nordic.svg)
+![pale](previews/pale.svg)
+![andromeda](previews/andromeda.svg)
+![sublunary](previews/sublunary.svg)
+![one](previews/one.svg)
+![hub-dim](previews/hub-dim.svg)
+![ice](previews/ice.svg)
+![hub-dark](previews/hub-dark.svg)
+
+![to-you](previews/to-you.svg)
+![fond](previews/fond.svg)
+![redline-dim](previews/redline-dim.svg)
+![EX](previews/EX.svg)
+![groovy](previews/groovy.svg)
+![fusion](previews/fusion.svg)
+![EY](previews/EY.svg)
+![greenery](previews/greenery.svg)
+
+![spice](previews/spice.svg)
+![minimal-dark](previews/minimal-dark.svg)
+![blue-in-green](previews/blue-in-green.svg)
+![redline](previews/redline.svg)
 
 
 ## Ecosystem
