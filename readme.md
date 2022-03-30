@@ -71,6 +71,8 @@ and click on your preferred editor.
 
 ![andromeda](previews/andromeda.svg)
 ![blue-in-green](previews/blue-in-green.svg)
+![EX](previews/EX.svg)
+![EY](previews/EY.svg)
 ![fond](previews/fond.svg)
 ![fusion](previews/fusion.svg)
 ![greenery](previews/greenery.svg)
@@ -84,7 +86,12 @@ and click on your preferred editor.
 ![one](previews/one.svg)
 ![pale](previews/pale.svg)
 ![paperwhite](previews/paperwhite.svg)
-![spice](previews/spice.svg) ![sublunary](previews/sublunary.svg)
+![redline](previews/redline.svg)
+![redline-dim](previews/redline-dim.svg)
+![spice](previews/spice.svg)
+![sublunary](previews/sublunary.svg)
+![to-you](previews/to-you.svg)
+![utopian](previews/utopian.svg)
 
 
 ## Ecosystem

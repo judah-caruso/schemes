@@ -1,14 +1,14 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Sublunary by Judah Caruso</title>
+   <title>Utopian by Judah Caruso</title>
    <style>
-      #c0 { fill: #242C38; } <!-- Background -->
-      #c1 { fill: #D1D1D1; } <!-- Foreground, Operators --> 
-      #c2 { fill: #F0C0BE; } <!-- Types --> 
-      #c3 { fill: #D1D1D1; } <!-- Procedures, Keywords --> 
-      #c4 { fill: #F0C0BE; } <!-- Constants, Strings -->
-      #c5 { fill: #D1D1D1; } <!-- Pre-Processor, Special -->
-      #c6 { fill: #878B92; } <!-- Errors -->
-      #c7 { fill: #878B92; } <!-- Comments --> 
+      #c0 { fill: #F9F9F7; } <!-- Background -->
+      #c1 { fill: #6F6C5D; } <!-- Foreground, Operators --> 
+      #c2 { fill: #6F6C5D; } <!-- Types --> 
+      #c3 { fill: #6F6C5D; } <!-- Procedures, Keywords --> 
+      #c4 { fill: #50957b; } <!-- Constants, Strings -->
+      #c5 { fill: #50957B; } <!-- Pre-Processor, Special -->
+      #c6 { fill: #6F6C5D; } <!-- Errors -->
+      #c7 { fill: #BBB9AD; } <!-- Comments --> 
    </style>
 
    <rect width="288" height="140" id="c0"></rect>   
