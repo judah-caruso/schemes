@@ -139,6 +139,7 @@ As this project is new, ideas are also welcome.
    - Format: Schemes now use pixels to have better display consistency between platforms.
    - Format: Changed font to use `ui-monospace` by default and `monospace` as a fallback.
    - Format: Added a `<version>` tag so tools can better support future updates.
+   - Format: Made border more round.
    - Editor: Added on-the-fly syntax highlighting so new language preview options can be add more easily. See `languages.js` for more info.
    - Editor: Removed unimplemented VIM and VS Code export options.
    - Editor: Improved error handling around clipboard copy failure. Now what would've been exported is printed to the console if it can't be copied.
