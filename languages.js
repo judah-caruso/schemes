@@ -135,7 +135,7 @@ const Point = struct {
 \ty: f32,
 };
 pub fn main() !void {
-\tvar p = Point{ \\uX: 10, y: 20 };
+\tvar p = Point{ .\\uX = 10, .y = 20 };
 \ttry std.debug.print("{}\\n", .{ p });
 }
 `,
