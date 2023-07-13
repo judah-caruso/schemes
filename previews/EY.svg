@@ -1,5 +1,6 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>EY by Judah Caruso</title>
+   <title>EY</title>
+   <version>2</version>
    <style>
       #c0 { fill: #181F20; } <!-- Background -->
       #c1 { fill: #B3A59A; } <!-- Foreground, Operators --> 
@@ -10,7 +11,7 @@
       #c6 { fill: #C76B6B; } <!-- Errors -->
       #c7 { fill: #595959; } <!-- Comments --> 
    </style>
-
-   <rect width="288" height="140" id="c0"></rect>   
-   <text x="10" y="20" style="font-family: monospace" id="c1"><tspan x="10"><tspan id="c5">#include</tspan> <tspan id="c4">&lt;iostream&gt;</tspan></tspan><tspan x="10" dy="2em"><tspan id="c3">using</tspan> <tspan id="c3">namespace</tspan> std;</tspan><tspan x="10" dy="1em"><tspan id="c2">int</tspan> <tspan id="c3">main</tspan>(<tspan id="c2">int</tspan> c, <tspan id="c2">char</tspan>* v[]) {</tspan><tspan x="25" dy="1em"><tspan id="c2">auto</tspan> args = vector&lt;string&gt;(v, v+c);</tspan><tspan x="25" dy="1em"><tspan id="c3">for</tspan> (<tspan id="c2">auto</tspan>&amp; arg : args)</tspan><tspan x="40" dy="1em">cout &lt;&lt; quoted(arg) &lt;&lt; <tspan id="c4">"<tspan id="c5">\n</tspan>"</tspan>;</tspan><tspan x="25" dy="1em"><tspan id="c3">return</tspan> <tspan id="c4">0</tspan>; <tspan id="c7">// This is a comment</tspan></tspan><tspan x="10" dy="1em">}</tspan></text>
+   <!-- Language Preview -->
+   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
+   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c5">import</tspan> <tspan id="c3">"fmt"</tspan></tspan><tspan x="19px" y="33px"></tspan><tspan x="5px" y="47px"><tspan id="c3">type</tspan> Point <tspan id="c2">struct</tspan> {</tspan><tspan x="19px" y="61px">X, Y <tspan id="c2">float32</tspan></tspan><tspan x="5px" y="75px">}</tspan><tspan x="5px" y="89px"><tspan id="c3">func</tspan> <tspan id="c3">main</tspan>() {</tspan><tspan x="19px" y="103px">p := Point{ <tspan id="c6" style="text-decoration: underline wavy">x</tspan>: <tspan id="c3">10</tspan>, Y: <tspan id="c3">30</tspan> }</tspan><tspan x="19px" y="117px">fmt.printf(<tspan id="c3">"Point %v<tspan id="c5">\n</tspan>"</tspan>, p)</tspan><tspan x="5px" y="131px">} <tspan id="c7">// This is a comment</tspan></tspan></text>
 </svg>

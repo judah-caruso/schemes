@@ -1,16 +1,17 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Redline by Judah Caruso</title>
+   <title>Redline</title>
+   <version>2</version>
    <style>
       #c0 { fill: #000000; } <!-- Background -->
-      #c1 { fill: #BEA9AD; } <!-- Foreground, Operators --> 
-      #c2 { fill: #BEA9AD; } <!-- Types --> 
-      #c3 { fill: #BEA9AD; } <!-- Procedures, Keywords --> 
+      #c1 { fill: #BEA9AD; } <!-- Foreground, Operators -->
+      #c2 { fill: #BEA9AD; } <!-- Types -->
+      #c3 { fill: #BEA9AD; } <!-- Procedures, Keywords -->
       #c4 { fill: #C0595F; } <!-- Constants, Strings -->
       #c5 { fill: #C0595F; } <!-- Pre-Processor, Special -->
       #c6 { fill: #C0595F; } <!-- Errors -->
-      #c7 { fill: #666666; } <!-- Comments --> 
+      #c7 { fill: #666666; } <!-- Comments -->
    </style>
-
-   <rect width="288" height="140" id="c0"></rect>   
-   <text x="10" y="20" style="font-family: monospace" id="c1"><tspan x="10" id="c5">#[derive(Debug)]</tspan><tspan x="10" dy="1em"><tspan id="c2">struct</tspan> Point {</tspan><tspan x="25" dy="1em">x: <tspan id="c2">f32</tspan>,</tspan><tspan x="25" dy="1em">y: <tspan id="c2">f32</tspan>,</tspan><tspan x="10" dy="1em">}</tspan><tspan x="10" dy="1em"><tspan id="c2">fn</tspan> <tspan id="c3">main</tspan>() {</tspan><tspan x="25" dy="1em"><tspan id="c2">let</tspan> point = Point{ <tspan id="c4">10</tspan>, <tspan id="c4">20</tspan> };</tspan><tspan x="25" dy="1em">println!(<tspan id="c4">"{:?}"</tspan>, point);</tspan><tspan x="10" dy="1em">} <tspan id="c7">// This is a comment</tspan></tspan></text>
+   <!-- Language Preview -->
+   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
+   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c5">import</tspan> { serve } <tspan id="c5">from</tspan> <tspan id="c3">"server.js"</tspan>;</tspan><tspan x="19px" y="33px"></tspan><tspan x="5px" y="47px"><tspan id="c3">const</tspan> config = { port: <tspan id="c3">8080</tspan> };</tspan><tspan x="19px" y="61px"></tspan><tspan x="5px" y="75px">serve((request) =&gt; {</tspan><tspan x="19px" y="89px"><tspan id="c3">let</tspan> res = <tspan id="c3">new</tspan> Response(<tspan id="c3">"Hello!<tspan id="c5">\n</tspan>"</tspan>);</tspan><tspan x="19px" y="103px"><tspan id="c3">return</tspan> <tspan id="c6" style="text-decoration: underline wavy">rse</tspan>;</tspan><tspan x="5px" y="117px">}, config); <tspan id="c7">// This is a comment</tspan></tspan></text>
 </svg>

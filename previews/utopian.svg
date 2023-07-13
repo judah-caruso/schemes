@@ -1,17 +1,17 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Utopian by Judah Caruso</title>
+   <title>Utopian</title>
+   <version>2</version>
    <style>
       #c0 { fill: #F9F9F7; } <!-- Background -->
-      #c1 { fill: #6F6C5D; } <!-- Foreground, Operators --> 
-      #c2 { fill: #6F6C5D; } <!-- Types --> 
-      #c3 { fill: #6F6C5D; } <!-- Procedures, Keywords --> 
+      #c1 { fill: #6F6C5D; } <!-- Foreground, Operators -->
+      #c2 { fill: #6F6C5D; } <!-- Types -->
+      #c3 { fill: #6F6C5D; } <!-- Procedures, Keywords -->
       #c4 { fill: #50957b; } <!-- Constants, Strings -->
       #c5 { fill: #50957B; } <!-- Pre-Processor, Special -->
       #c6 { fill: #6F6C5D; } <!-- Errors -->
-      #c7 { fill: #BBB9AD; } <!-- Comments --> 
+      #c7 { fill: #BBB9AD; } <!-- Comments -->
    </style>
-
-   <rect width="288" height="140" id="c0"></rect>   
-   <text x="10" y="20" style="font-family: monospace" id="c1"><tspan x="10"><tspan id="c3">function</tspan> <tspan id="c3">main</tspan>()</tspan><tspan x="25" dy="1em" id="c7">-- This is a comment</tspan><tspan x="25" dy="1em"><tspan id="c2">local</tspan> point = { x = <tspan id="c4">10</tspan>, y = <tspan id="c4">20</tspan> }</tspan><tspan x="25" dy="1em"><tspan id="c3">if</tspan> point.x &lt;= <tspan id="c4">10</tspan> <tspan id="c3">then</tspan></tspan><tspan x="40" dy="1em">print <tspan id="c4">"Hello, World"</tspan></tspan><tspan x="25" dy="1em" id="c3">end</tspan><tspan x="10" dy="1em" id="c3">end</tspan><tspan x="10" dy="2em">main()</tspan>
-</text>
+   <!-- Language Preview -->
+   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
+   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px">(<tspan id="c3">defn</tspan> (<tspan id="c3">main</tspan> [args]</tspan><tspan x="19px" y="33px">(<tspan id="c3">let</tspan></tspan><tspan x="33px" y="47px">[point '(<tspan id="c3">10</tspan> <tspan id="c3">20</tspan>)]</tspan><tspan x="33px" y="61px">(display <tspan id="c3">"%d %d"</tspan></tspan><tspan x="47px" y="75px">(<tspan id="c3">car</tspan> point) (<tspan id="c3">cdr</tspan> point))</tspan><tspan x="33px" y="89px">(<tspan id="c6" style="text-decoration: underline wavy">nwline</tspan>)))</tspan><tspan x="19px" y="103px"></tspan><tspan x="5px" y="117px"><tspan id="c7">; This is a comment</tspan></tspan><tspan x="5px" y="131px">(<tspan id="c3">main</tspan> '())</tspan></text>
 </svg>

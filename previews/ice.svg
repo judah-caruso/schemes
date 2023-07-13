@@ -1,24 +1,17 @@
-<svg width='288px' height='140px' xmlns='http://www.w3.org/2000/svg' baseProfile='full' version='1.1' >
-   <title>Ice by Judah Caruso</title>
+<svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
+   <title>Ice</title>
+   <version>2</version>
    <style>
       #c0 { fill: #161820; } <!-- Background -->
-      #c1 { fill: #C6C8D0; } <!-- Foreground, Operators --> 
-      #c2 { fill: #89B8C2; } <!-- Types --> 
-      #c3 { fill: #84A0C6; } <!-- Procedures, Keywords --> 
+      #c1 { fill: #C6C8D0; } <!-- Foreground, Operators -->
+      #c2 { fill: #89B8C2; } <!-- Types -->
+      #c3 { fill: #84A0C6; } <!-- Procedures, Keywords -->
       #c4 { fill: #84A0C6; } <!-- Constants, Strings -->
       #c5 { fill: #B4BE82; } <!-- Pre-Processor, Special -->
       #c6 { fill: #D47D7A; } <!-- Errors -->
-      #c7 { fill: #6B7082; } <!-- Comments --> 
+      #c7 { fill: #6B7082; } <!-- Comments -->
    </style>
-
-   <rect width='288' height='140' id='c0'></rect>   
-   <text x='10' y='20' style="font-family: monospace" id="c1">
-      <tspan x='10'><tspan id='c5'>&#35;include</tspan> <tspan id='c4'>&lt;stdio.h&gt;</tspan></tspan>
-      <tspan x='10' dy='2em'><tspan id='c3'>typedef</tspan> <tspan id='c2'>struct</tspan> &#123; <tspan id='c2'>float</tspan> x&#44; y&#59; &#125; Point&#59;</tspan>
-      <tspan x='10' dy='2em'><tspan id='c2'>int</tspan> <tspan id='c3'>main</tspan>&#40;<tspan id='c2'>int</tspan> <tspan>argc</tspan>&#44; <tspan id='c2'>char</tspan>&#42; <tspan>argv</tspan>&#91;&#93;&#41;</tspan>
-      <tspan x='10' dy='1em'>&#123;</tspan>
-      <tspan x='25' dy='1em'><tspan><tspan id='c3'>if</tspan> &#40;<tspan id='c4'>1</tspan>&#41;</tspan> printf&#40;<tspan id='c4'>"Hello&#44; World!<tspan id='c5'>\n</tspan>"</tspan>&#41;&#59;</tspan>
-      <tspan x='25' dy='1em'><tspan id='c3'>return</tspan> <tspan id='c4'>0</tspan>&#59; <tspan id='c7'>// This is a comment</tspan>
-      </tspan><tspan x='10' dy='1em'>&#125;</tspan>
-   </text>
+   <!-- Language Preview -->
+   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
+   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c5">from</tspan> math <tspan id="c5">import</tspan> <tspan id="c1">*</tspan></tspan><tspan x="5px" y="33px"><tspan id="c3">class</tspan> Point: <tspan id="c7"># This is a comment</tspan></tspan><tspan x="19px" y="47px">x = None</tspan><tspan x="19px" y="61px">y = <tspan id="c6" style="text-decoration: underline wavy">Non</tspan></tspan><tspan x="19px" y="75px"></tspan><tspan x="19px" y="89px"><tspan id="c3">def</tspan> __init__(self, x, y):</tspan><tspan x="33px" y="103px">self.x = x</tspan><tspan x="33px" y="117px">self.y = y</tspan></text>
 </svg>

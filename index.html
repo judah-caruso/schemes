@@ -11,9 +11,10 @@
       }
 
       body {
-         margin     : 0;
-         padding    : 0;
-         transition : 0.4s;
+         margin:     0;
+         padding:    0;
+         transition: 0.4s;
+         background: #000;
       }
 
       #languages, #exports {
@@ -21,21 +22,21 @@
       }
 
       #languages button, #exports button {
-         border : 0;
-         filter : invert(1);
+         border: 0;
+         filter: invert(1);
       }
 
-      #languages button:hover, #exports button:hover {
-         cursor  : pointer;
-         opacity : 0.5;
+      #languages button:hover, #exports button:hover, {
+         cursor:  pointer;
+         opacity: 0.5;
       }
 
       #preview {
-         height        : 140px;
-         margin        : 140px auto 40px auto;
-         max-width     : 288px;
-         border        : 1px solid #000;
-         border-radius : 3px;
+         height:        140px;
+         margin:        140px auto 40px auto;
+         max-width:     288px;
+         border-radius: 10px;
+         border:        1px solid black;
       }
 
       #preview svg:hover {
@@ -43,37 +44,56 @@
       }
 
       #color-picker {
-         position   : absolute;
-         width      : 0;
-         height     : 0;
-         visibility : hidden;
+         position:   absolute;
+         width:      0;
+         height:     0;
+         visibility: hidden;
       }
 
       #editor {
-         display               : grid;
-         grid-template-columns : repeat(4, 1fr);
-         grid-template-rows    : repeat(2, 1fr);
-         grid-gap              : 3px;
-         width                 : 220px;
-         margin                : 0 auto;
+         display:               grid;
+         grid-template-columns: repeat(4, 1fr);
+         grid-template-rows:    repeat(2, 1fr);
+         grid-gap:              3px;
+         width:                 220px;
+         margin:                0 auto;
+      }
+
+      .github {
+         text-decoration: none;
+         margin: 10px;
+         width: 100%;
+         mix-blend-mode: difference;
+         color: white;
+      }
+
+      .github:hover {
+         background: black;
+         filter: invert(1);
       }
 
       .picker {
-         display       : inline-block;
-         width         : 50px;
-         height        : 50px;
-         border        : 1px solid black;
-         border-radius : 50%;
+         display:       inline-block;
+         width:         50px;
+         height:        50px;
+         border:        1px solid black;
+         border-radius: 50%;
       }
 
       .picker:hover {
          cursor: pointer;
+      }
+
+      .label {
+         padding: 2px;
+         pointer-events: none;
       }
    </style>
 </head>
 <body id='c0'>
    <main>
       <div id="languages">
+         <span class="label" id="c7">Preview Language</span>
          <button onclick="update_language('eight')">8</button>
          <button onclick="update_language('c')">C</button>
          <button onclick="update_language('cpp')">C++</button>
@@ -81,40 +101,39 @@
          <button onclick="update_language('jai')">Jai</button>
          <button onclick="update_language('js')">JavaScript</button>
          <button onclick="update_language('lua')">Lua</button>
-         <button onclick="update_language('python')">Python</button>
+         <button onclick="update_language('py')">Python</button>
          <button onclick="update_language('rust')">Rust</button>
+         <button onclick="update_language('scheme')">Scheme</button>
+         <button onclick="update_language('zig')">Zig</button>
       </div>
 
       <div id="exports">
-         <button onclick="export_theme(3)">Lite</button>
-         <button onclick="export_theme(1)">Sublime Text</button>
-         <button disabled onclick="export_theme(0)">Vim</button>
-         <button disabled onclick="export_theme(2)">VS Code</button>
+         <span class="label" id="c7">Editor Export</span>
+         <button onclick="export_theme('lite')">Lite</button>
+         <button onclick="export_theme('sublime')">Sublime Text</button>
+         <br/>
       </div>
+
+      <a class="github" href="https://github.com/judah-caruso/schemes" target="_blank">Schemes GitHub</a>
 
       <div id="preview">
          <svg width='288px' height='140px' xmlns='http://www.w3.org/2000/svg' baseProfile='full' version='1.1'>
             <title>Color Scheme by Person</title>
+            <version>2</version>
             <style>
-               #c0 { fill: #161820; } <!-- Background -->
-               #c1 { fill: #C6C8D0; } <!-- Foreground, Operators --> 
-               #c2 { fill: #89B8C2; } <!-- Types --> 
-               #c3 { fill: #84A0C6; } <!-- Procedures, Keywords --> 
-               #c4 { fill: #84A0C6; } <!-- Constants, Strings -->
-               #c5 { fill: #B4BE82; } <!-- Pre-Processor, Special -->
-               #c6 { fill: #D47D7A; } <!-- Errors -->
-               #c7 { fill: #6B7082; } <!-- Comments --> 
+               #c0 { fill: #2E3440; } <!-- Background -->
+               #c1 { fill: #D8DEE9; } <!-- Foreground, Operators -->
+               #c2 { fill: #88C0D0; } <!-- Types -->
+               #c3 { fill: #81A1C1; } <!-- Procedures, Keywords -->
+               #c4 { fill: #A3BE8C; } <!-- Constants, Strings -->
+               #c5 { fill: #5E81AC; } <!-- Pre-Processor, Special -->
+               #c6 { fill: #BF616A; } <!-- Errors -->
+               #c7 { fill: #616E88; } <!-- Comments -->
             </style>
-
-            <rect width='288' height='140' id='c0'></rect>   
-            <text x='10' y='20' style="font-family: monospace" id="c1">
-               <tspan x='10'><tspan id='c5'>&#35;include</tspan> <tspan id='c4'>&lt;stdio.h&gt;</tspan></tspan>
-               <tspan x='10' dy='2em'><tspan id='c3'>typedef</tspan> <tspan id='c2'>struct</tspan> &#123; <tspan id='c2'>float</tspan> x&#44; y&#59; &#125; Point&#59;</tspan>
-               <tspan x='10' dy='2em'><tspan id='c2'>int</tspan> <tspan id='c3'>main</tspan>&#40;<tspan id='c2'>int</tspan> <tspan>argc</tspan>&#44; <tspan id='c2'>char</tspan>&#42; <tspan>argv</tspan>&#91;&#93;&#41;</tspan>
-               <tspan x='10' dy='1em'>&#123;</tspan>
-               <tspan x='25' dy='1em'><tspan><tspan id='c3'>if</tspan> &#40;<tspan id='c4'>1</tspan>&#41;</tspan> printf&#40;<tspan id='c4'>"Hello&#44; World!<tspan id='c5'>\n</tspan>"</tspan>&#41;&#59;</tspan>
-               <tspan x='25' dy='1em'><tspan id='c3'>return</tspan> <tspan id='c4'>0</tspan>&#59; <tspan id='c7'>// This is a comment</tspan>
-               </tspan><tspan x='10' dy='1em'>&#125;</tspan>
+            <!-- Language Preview -->
+            <rect width='288px' height='140px' rx='10px' id='c0'></rect>
+            <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1">
+               <!-- Replaced by language preview -->
             </text>
          </svg>
       </div>
@@ -123,6 +142,7 @@
       </div>
    </main>
 
+   <script type="text/javascript" src="languages.js"></script>
    <script type="text/javascript" src="templates.js"></script>
    <script type="text/javascript">
       let theme_preview = document.getElementById("preview");
@@ -139,19 +159,6 @@
          c6: "#000",
          c7: "#000"
       };
-
-      // Syntax previews
-      const languages = {
-         c      : "ICAgICAgPHRzcGFuIHg9JzEwJz48dHNwYW4gaWQ9J2M1Jz4mIzM1O2luY2x1ZGU8L3RzcGFuPiA8dHNwYW4gaWQ9J2M0Jz4mbHQ7c3RkaW8uaCZndDs8L3RzcGFuPjwvdHNwYW4+CiAgICAgIDx0c3BhbiB4PScxMCcgZHk9JzJlbSc+PHRzcGFuIGlkPSdjMyc+dHlwZWRlZjwvdHNwYW4+IDx0c3BhbiBpZD0nYzInPnN0cnVjdDwvdHNwYW4+ICYjMTIzOyA8dHNwYW4gaWQ9J2MyJz5mbG9hdDwvdHNwYW4+IHgmIzQ0OyB5JiM1OTsgJiMxMjU7IFBvaW50JiM1OTs8L3RzcGFuPgogICAgICA8dHNwYW4geD0nMTAnIGR5PScyZW0nPjx0c3BhbiBpZD0nYzInPmludDwvdHNwYW4+IDx0c3BhbiBpZD0nYzMnPm1haW48L3RzcGFuPiYjNDA7PHRzcGFuIGlkPSdjMic+aW50PC90c3Bhbj4gPHRzcGFuPmFyZ2M8L3RzcGFuPiYjNDQ7IDx0c3BhbiBpZD0nYzInPmNoYXI8L3RzcGFuPiYjNDI7IDx0c3Bhbj5hcmd2PC90c3Bhbj4mIzkxOyYjOTM7JiM0MTs8L3RzcGFuPgogICAgICA8dHNwYW4geD0nMTAnIGR5PScxZW0nPiYjMTIzOzwvdHNwYW4+CiAgICAgIDx0c3BhbiB4PScyNScgZHk9JzFlbSc+PHRzcGFuPjx0c3BhbiBpZD0nYzMnPmlmPC90c3Bhbj4gJiM0MDs8dHNwYW4gaWQ9J2M0Jz4xPC90c3Bhbj4mIzQxOzwvdHNwYW4+IHByaW50ZiYjNDA7PHRzcGFuIGlkPSdjNCc+IkhlbGxvJiM0NDsgV29ybGQhPHRzcGFuIGlkPSdjNSc+XG48L3RzcGFuPiI8L3RzcGFuPiYjNDE7JiM1OTs8L3RzcGFuPgogICAgICA8dHNwYW4geD0nMjUnIGR5PScxZW0nPjx0c3BhbiBpZD0nYzMnPnJldHVybjwvdHNwYW4+IDx0c3BhbiBpZD0nYzQnPjA8L3RzcGFuPiYjNTk7IDx0c3BhbiBpZD0nYzcnPi8vIFRoaXMgaXMgYSBjb21tZW50PC90c3Bhbj4KICAgICAgPC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScxZW0nPiYjMTI1OzwvdHNwYW4+",
-         cpp    : "PHRzcGFuIHg9JzEwJz48dHNwYW4gaWQ9J2M1Jz4jaW5jbHVkZTwvdHNwYW4+IDx0c3BhbiBpZD0nYzQnPiZsdDtpb3N0cmVhbSZndDs8L3RzcGFuPjwvdHNwYW4+PHRzcGFuIHg9JzEwJyBkeT0nMmVtJz48dHNwYW4gaWQ9J2MzJz51c2luZzwvdHNwYW4+IDx0c3BhbiBpZD0nYzMnPm5hbWVzcGFjZTwvdHNwYW4+IHN0ZDs8L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMic+aW50PC90c3Bhbj4gPHRzcGFuIGlkPSdjMyc+bWFpbjwvdHNwYW4+KDx0c3BhbiBpZD0nYzInPmludDwvdHNwYW4+IGMsIDx0c3BhbiBpZD0nYzInPmNoYXI8L3RzcGFuPiogdltdKSB7PC90c3Bhbj48dHNwYW4geD0nMjUnIGR5PScxZW0nPjx0c3BhbiBpZD0nYzInPmF1dG88L3RzcGFuPiBhcmdzID0gdmVjdG9yJmx0O3N0cmluZyZndDsodiwgditjKTs8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMyc+Zm9yPC90c3Bhbj4gKDx0c3BhbiBpZD0nYzInPmF1dG88L3RzcGFuPiYgYXJnIDogYXJncyk8L3RzcGFuPjx0c3BhbiB4PSc0MCcgZHk9JzFlbSc+Y291dCAmbHQ7Jmx0OyBxdW90ZWQoYXJnKSAmbHQ7Jmx0OyA8dHNwYW4gaWQ9J2M0Jz4iPHRzcGFuIGlkPSdjNSc+XG48L3RzcGFuPiI8L3RzcGFuPjs8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMyc+cmV0dXJuPC90c3Bhbj4gPHRzcGFuIGlkPSdjNCc+MDwvdHNwYW4+OyA8dHNwYW4gaWQ9J2M3Jz4vLyBUaGlzIGlzIGEgY29tbWVudDwvdHNwYW4+PC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScxZW0nPn08L3RzcGFuPg==",
-         eight  : "PHRzcGFuIHg9JzEwJz4oPHRzcGFuIGlkPSdjNSc+aW1wb3J0PC90c3Bhbj4gPHRzcGFuIGlkPSdjNCc+ImNvcmU6Zm10IjwvdHNwYW4+KTwvdHNwYW4+PHRzcGFuIHg9JzEwJyBkeT0nMmVtJz4oPHRzcGFuIGlkPSdjMic+Zm48L3RzcGFuPiA8dHNwYW4gaWQ9J2MzJz5tYWluPC90c3Bhbj4gWyBhcmdzOltdPHRzcGFuIGlkPSdjMic+c3RyaW5nPC90c3Bhbj4gXTwvdHNwYW4+PHRzcGFuIHg9JzI1JyBkeT0nMWVtJz4oPHRzcGFuIGlkPSdjMyc+bGV0PC90c3Bhbj4gY291bnQ6PHRzcGFuIGlkPSdjMic+c2ludDwvdHNwYW4+IGFyZ3MuY291bnQpPC90c3Bhbj48dHNwYW4geD0nMjUnIGR5PScyZW0nPig8dHNwYW4gaWQ9J2MzJz53aGVuPC90c3Bhbj4gKD4gY291bnQgPHRzcGFuIGlkPSdjNCc+MDwvdHNwYW4+KTwvdHNwYW4+PHRzcGFuIHg9JzQwJyBkeT0nMWVtJz4oPHRzcGFuIGlkPSdjMyc+cmFuZ2U8L3RzcGFuPiBbIGkgPHRzcGFuIGlkPSdjNCc+MDwvdHNwYW4+IGNvdW50IF08L3RzcGFuPjx0c3BhbiB4PSc1NScgZHk9JzFlbSc+KHByaW50bG4gYXJnc1tpXSkpKTwvdHNwYW4+PHRzcGFuIHg9JzEwJyBkeT0nMWVtJz4pIDx0c3BhbiBpZD0nYzcnPjsgVGhpcyBpcyBhIGNvbW1lbnQ8L3RzcGFuPjwvdHNwYW4+",
-         jai    : "ICAgICAgPHRzcGFuIHg9JzEwJz5Qb2ludCA6OiA8dHNwYW4gaWQ9J2MyJz5zdHJ1Y3Q8L3RzcGFuPiB7IHgsIHk6IDx0c3BhbiBpZD0nYzInPmZsb2F0PC90c3Bhbj47IH08L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzJlbSc+PHRzcGFuIGlkPSdjMyc+bWFpbjwvdHNwYW4+IDo6ICgpIHs8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbScgaWQ9J2M3Jz4vLyBUaGlzIGlzIGEgY29tbWVudDwvdHNwYW4+PHRzcGFuIHg9JzI1JyBkeT0nMWVtJz5wb2ludCA6PSA8dHNwYW4gaWQ9J2MyJz5Qb2ludDwvdHNwYW4+LnsgPHRzcGFuIGlkPSdjNCc+MTA8L3RzcGFuPiwgPHRzcGFuIGlkPSdjNCc+MjA8L3RzcGFuPiB9OzwvdHNwYW4+PHRzcGFuIHg9JzI1JyBkeT0nMWVtJz5wcmludCg8dHNwYW4gaWQ9J2M0Jz4iUG9pbnQ6ICU8dHNwYW4gaWQ9J2M1Jz5cbjwvdHNwYW4+IjwvdHNwYW4+LCBwb2ludCk7PC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScxZW0nPn08L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzJlbSc+PHRzcGFuIGlkPSdjNSc+I2ltcG9ydDwvdHNwYW4+IDx0c3BhbiBpZD0nYzQnPiJCYXNpYyI8L3RzcGFuPjs8L3RzcGFuPgo=",
-         go     : "PHRzcGFuIHg9JzEwJz48dHNwYW4gaWQ9J2M1Jz5pbXBvcnQ8L3RzcGFuPiA8dHNwYW4gaWQ9J2M0Jz4iZm10IjwvdHNwYW4+IDx0c3BhbiBpZD0nYzcnPi8vIHBhY2thZ2UgbWFpbjwvdHNwYW4+PC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScyZW0nPjx0c3BhbiBpZD0nYzMnPnR5cGU8L3RzcGFuPiBQb2ludCA8dHNwYW4gaWQ9J2MyJz5zdHJ1Y3Q8L3RzcGFuPiB7PC90c3Bhbj48dHNwYW4geD0nMjUnIGR5PScxZW0nPngsIHkgPHRzcGFuIGlkPSdjMic+ZmxvYXQzMjwvdHNwYW4+PC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScxZW0nPn08L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzJlbSc+PHRzcGFuIGlkPSdjMic+ZnVuYzwvdHNwYW4+IDx0c3BhbiBpZD0nYzMnPm1haW48L3RzcGFuPigpIHs8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+Zm10LnByaW50bG4oPHRzcGFuIGlkPSdjNCc+IkhlbGxvLCBXb3JsZCI8L3RzcGFuPik8L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzFlbSc+fTwvdHNwYW4+Cg==",
-         lua    : "PHRzcGFuIHg9JzEwJz48dHNwYW4gaWQ9J2MzJz5mdW5jdGlvbjwvdHNwYW4+IDx0c3BhbiBpZD0nYzMnPm1haW48L3RzcGFuPigpPC90c3Bhbj48dHNwYW4geD0nMjUnIGR5PScxZW0nIGlkPSdjNyc+LS0gVGhpcyBpcyBhIGNvbW1lbnQ8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMic+bG9jYWw8L3RzcGFuPiBwb2ludCA9IHsgeCA9IDx0c3BhbiBpZD0nYzQnPjEwPC90c3Bhbj4sIHkgPSA8dHNwYW4gaWQ9J2M0Jz4yMDwvdHNwYW4+IH08L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMyc+aWY8L3RzcGFuPiBwb2ludC54ICZsdDs9IDx0c3BhbiBpZD0nYzQnPjEwPC90c3Bhbj4gPHRzcGFuIGlkPSdjMyc+dGhlbjwvdHNwYW4+PC90c3Bhbj48dHNwYW4geD0nNDAnIGR5PScxZW0nPnByaW50IDx0c3BhbiBpZD0nYzQnPiJIZWxsbywgV29ybGQiPC90c3Bhbj48L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbScgaWQ9J2MzJz5lbmQ8L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzFlbScgaWQ9J2MzJz5lbmQ8L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzJlbSc+bWFpbigpPC90c3Bhbj4K",
-         python : "PHRzcGFuIHg9JzEwJz48dHNwYW4gaWQ9J2M1Jz5mcm9tPC90c3Bhbj4gbWF0aCA8dHNwYW4gaWQ9J2M1Jz5pbXBvcnQ8L3RzcGFuPiAqPC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScyZW0nPjx0c3BhbiBpZD0nYzMnPmNsYXNzPC90c3Bhbj4gUG9pbnQ6IDx0c3BhbiBpZD0nYzcnPiMgVGhpcyBpcyBhIGNvbW1lbnQ8L3RzcGFuPjwvdHNwYW4+PHRzcGFuIHg9JzI1JyBkeT0nMWVtJz54ID0gPHRzcGFuIGlkPSdjNCc+MC4wPC90c3Bhbj48L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+eSA9IDx0c3BhbiBpZD0nYzQnPjAuMDwvdHNwYW4+PC90c3Bhbj48dHNwYW4geD0nMjUnIGR5PScyZW0nPjx0c3BhbiBpZD0nYzMnPmRlZjwvdHNwYW4+IDx0c3BhbiBpZD0nYzMnPl9faW5pdF9fPC90c3Bhbj4oc2VsZiwgeCwgeSk6PC90c3Bhbj48dHNwYW4geD0nNDAnIGR5PScxZW0nPnNlbGYueCA9IHg8L3RzcGFuPjx0c3BhbiB4PSc0MCcgZHk9JzFlbSc+c2VsZi55ID0geTwvdHNwYW4+Cg==",
-         js     : "PHRzcGFuIHg9JzEwJz48dHNwYW4gaWQ9J2MzJz5pbXBvcnQ8L3RzcGFuPiB7IHNlcnZlIH0gPHRzcGFuIGlkPSdjMyc+ZnJvbTwvdHNwYW4+IDx0c3BhbiBpZD0nYzQnPiJzZXJ2ZXIudHMiPC90c3Bhbj47PC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScyZW0nPjx0c3BhbiBpZD0nYzMnPmNvbnN0PC90c3Bhbj4gY29uZmlnID0geyBwb3J0OiA8dHNwYW4gaWQ9J2M0Jz44MDgwPC90c3Bhbj4gfTs8L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzJlbScgaWQ9J2M3Jz4vLyBMaXN0ZW4gYXQgbG9jYWxob3N0OjgwODA8L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzFlbSc+c2VydmUoKHJlcXVlc3QpID0+IHs8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMyc+bGV0PC90c3Bhbj4gcmVzID0gbmV3IFJlc3BvbnNlKDx0c3BhbiBpZD0nYzQnPiJIZWxsbyE8dHNwYW4gaWQ9J2M1Jz5cbjwvdHNwYW4+IjwvdHNwYW4+KTs8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMyc+cmV0dXJuPC90c3Bhbj4gcmVzOzwvdHNwYW4+PHRzcGFuIHg9JzEwJyBkeT0xZW0+fSwgY29uZmlnKTs8L3RzcGFuPg==",
-         rust   : "PHRzcGFuIHg9JzEwJyBpZD0nYzUnPiNbZGVyaXZlKERlYnVnKV08L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMic+c3RydWN0PC90c3Bhbj4gUG9pbnQgezwvdHNwYW4+PHRzcGFuIHg9JzI1JyBkeT0nMWVtJz54OiA8dHNwYW4gaWQ9J2MyJz5mMzI8L3RzcGFuPiw8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+eTogPHRzcGFuIGlkPSdjMic+ZjMyPC90c3Bhbj4sPC90c3Bhbj48dHNwYW4geD0nMTAnIGR5PScxZW0nPn08L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzFlbSc+PHRzcGFuIGlkPSdjMic+Zm48L3RzcGFuPiA8dHNwYW4gaWQ9J2MzJz5tYWluPC90c3Bhbj4oKSB7PC90c3Bhbj48dHNwYW4geD0nMjUnIGR5PScxZW0nPjx0c3BhbiBpZD0nYzInPmxldDwvdHNwYW4+IHBvaW50ID0gUG9pbnR7IDx0c3BhbiBpZD0nYzQnPjEwPC90c3Bhbj4sIDx0c3BhbiBpZD0nYzQnPjIwPC90c3Bhbj4gfTs8L3RzcGFuPjx0c3BhbiB4PScyNScgZHk9JzFlbSc+cHJpbnRsbiEoPHRzcGFuIGlkPSdjNCc+Ins6P30iPC90c3Bhbj4sIHBvaW50KTs8L3RzcGFuPjx0c3BhbiB4PScxMCcgZHk9JzFlbSc+fSA8dHNwYW4gaWQ9J2M3Jz4vLyBUaGlzIGlzIGEgY29tbWVudDwvdHNwYW4+PC90c3Bhbj4=",
-      }; 
 
       const storage_id = "theme";
 
@@ -174,6 +181,7 @@
          }
 
          let json_str = JSON.stringify(theme_colors);
+
          console.log("Updating local storage:", json_str);
          localStorage.setItem(storage_id, JSON.stringify(theme_colors));
       }
@@ -203,10 +211,10 @@
             const svg     = new DOMParser().parseFromString(content, "text/html");
 
             try {
-               const title_element   = svg.getElementsByTagName("title")[0];
-               const style_element   = svg.getElementsByTagName("style")[0];
-               let   theme_style     = theme_preview.getElementsByTagName("style")[0];
-               let   theme_title     = theme_preview.getElementsByTagName("title")[0];
+               const title_element = svg.getElementsByTagName("title")[0];
+               const style_element = svg.getElementsByTagName("style")[0];
+               let   theme_style   = theme_preview.getElementsByTagName("style")[0];
+               let   theme_title   = theme_preview.getElementsByTagName("title")[0];
 
                theme_style.innerHTML = style_element.innerHTML;
                theme_title.innerHTML = title_element.innerHTML;
@@ -221,9 +229,77 @@
          reader.readAsText(file, "UTF-8");
       }
 
-      const update_language = (language) => {
-         let str  = atob(languages[language]);
-         let text = theme_svg.getElementsByTagName("text")[0];
+      const convert_preview_to_svg = (def) => {
+         const str   = def.preview;
+         const lines = str.split("\n").filter((l) => l.length > 0);
+
+         const type_regex      = new RegExp(`\\b(${def.types.join("|")})\\b`, "g");
+         const keyword_regex   = new RegExp(`\\b(${def.keywords.join("|")})\\b`, "g");
+         const directive_regex = new RegExp(`(${def.directives.join("|")})`, "g");
+         const comment_regex   = new RegExp(`([${def.comment}]{${def.comment.length}}.*$)`, "g");
+         const number_regex    = new RegExp(`(\\b([0-9]*[.])?[0-9]+([f])?)`, "g");
+         const escape_regex    = new RegExp("(\\\\[nrtv])", "g");
+         const main_regex      = new RegExp("\\b(main)\\b");
+         const underline_regex = new RegExp("\\\\u(\\w+)", "g");
+
+         // create string regex
+         const delims = def.strings.map((pair) => {
+            const start = pair[0];
+            const end   = pair[1];
+            return `(\\${start}.*?\\${end})`;
+         }).join("|");
+
+         const string_regex = new RegExp(delims.length > 0 ? `(${delims})` : "", "g");
+
+         // create operator regex
+         const ops = def.operators.map((op) => {
+            const o = op.split("").map((p) => `\\${p}`);
+            return o.join("");
+         }).join("|");
+
+         const operator_regex = new RegExp(ops.length > 0 ? `(${ops})` : "", "g");
+
+         let buf = "";
+         const offset = 5;
+         for (let i = 0; i < lines.length; i++) {
+            let line = lines[i];
+            const indent = line.split("\t").length - 1;
+
+            line = line.trim();
+
+            if (def.operators.length > 0)
+               line = line.replace(operator_regex, `<tspan id='c1'>$1</tspan>`);
+
+            line = line
+               .replace(escape_regex,    "<tspan id='c5'>$1</tspan>")
+               .replace(number_regex,    "<tspan id='c3'>$1</tspan>")
+               .replace(string_regex,    "<tspan id='c3'>$1</tspan>")
+               .replace(main_regex,      "<tspan id='c3'>$1</tspan>")
+               .replace(underline_regex, "<tspan id='c6' style='text-decoration: underline wavy'>$1</tspan>")
+               ;
+
+            if (def.directives.length > 0)
+               line = line.replace(directive_regex, `<tspan id='c5'>$1</tspan>`);
+
+            if (def.keywords.length > 0)
+               line = line.replace(keyword_regex, `<tspan id='c3'>$1</tspan>`);
+
+            if (def.types.length > 0)
+               line = line.replace(type_regex, `<tspan id='c2'>$1</tspan>`);
+
+            if (def.comment.length > 0)
+               line = line.replace(comment_regex, `<tspan id='c7'>$1</tspan>`);
+
+            buf += `<tspan x="${offset + (14 * indent)}px" y=${offset + (14 * (i + 1))}px>${line}</tspan>`;
+         }
+
+         return buf;
+      };
+
+      const update_language = (lang) => {
+         const def  = languages[lang];
+         const str  = convert_preview_to_svg(def);
+         const text = theme_svg.getElementsByTagName("text")[0];
          text.innerHTML = str;
       }
 
@@ -241,27 +317,24 @@
       }
 
       const copy_to_clipboard = (type, text) => {
-         navigator.clipboard.writeText(text).then(() => {
-            let str = `Copied ${type} to clipboard!`;
-            alert(str);
-            console.log(str);
-         }, () => {
-            console.log(`Unable to copy ${type} to clipboard!`);
-         });
+         try {
+            navigator.clipboard.writeText(text).then(() => {
+               let str = `Copied ${type} to clipboard!`;
+               alert(str);
+               console.log(str);
+            });
+         } catch (err) {
+            console.error("Unable to copy scheme to clipboard: ", err);
+            console.log("What was saved: ", text);
+         }
       }
 
       const export_theme = (editor) => {
          let theme_title = theme_svg.getElementsByTagName("title")[0].innerHTML;
 
          switch (editor) {
-            // Vim
-            case 0: {
-               console.log("Exporting Vim theme...");
-            } break;
-
-            // Sublime Text
-            case 1: {
-               let template = templates.sublime_text;
+            case "sublime": {
+               let template = templates.sublime;
 
                let var_str = "";
                for (let id in theme_colors) {
@@ -276,13 +349,7 @@
                copy_to_clipboard("Sublime Text Theme", template);
             } break;
 
-            // VS Code
-            case 2: {
-               console.log("Exporting VS Code theme...");
-            } break;
-
-            // Lite
-            case 3: {
+            case "lite": {
                let template = templates.lite;
 
                let var_str = "";
@@ -305,7 +372,7 @@
 
          // @Note: Bad but works for now
          let theme = theme_svg.outerHTML;
-         theme = theme.replace(/^ +/mg, "\t");
+         theme = theme.replace(/^\s+/mg, "\t");
          theme = theme.split("\n");
 
          let do_indent = false;
@@ -332,6 +399,7 @@
 
          theme = theme.join("\n");
          console.log(`Output Theme:\n%c${theme}`, "color: lightgreen;");
+
          copy_to_clipboard("SVG Theme", theme);
          event.stopPropagation();
       });
@@ -407,7 +475,6 @@
             }
 
             element.setAttribute("title", tooltip);
-
             element.addEventListener("click", (event) => {
                last_clicked = color_id;
                picker.style.setProperty("top" , `${event.y}px`);
@@ -420,6 +487,8 @@
          }
 
          document.body.appendChild(picker);
+
+         update_language('go');
 
          let previous_theme = localStorage.getItem(storage_id);
          if (previous_theme) {
