@@ -47,7 +47,7 @@ type Point struct {
 }
 func main() {
 \tp := Point{ \\ux: 10, Y: 30 }
-\tfmt.printf("Point %v\\n", p)
+\tfmt.Printf("Point %v\\n", p)
 } // This is a comment
 `,
 
@@ -176,7 +176,7 @@ const languages = {
       name: "Go",
       preview: previews.go,
       keywords: [ "type", "func", "package" ],
-      types: [ "float32", "struct" ],
+      types: [ "float32", "struct"  ],
       directives: [ "import" ],
       operators: [],
       strings: [ ['"', '"'] ],

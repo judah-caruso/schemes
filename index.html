@@ -272,8 +272,8 @@
 
             line = line
                .replace(escape_regex,    "<tspan id='c5'>$1</tspan>")
-               .replace(number_regex,    "<tspan id='c3'>$1</tspan>")
-               .replace(string_regex,    "<tspan id='c3'>$1</tspan>")
+               .replace(number_regex,    "<tspan id='c4'>$1</tspan>")
+               .replace(string_regex,    "<tspan id='c4'>$1</tspan>")
                .replace(main_regex,      "<tspan id='c3'>$1</tspan>")
                .replace(underline_regex, "<tspan id='c6' style='text-decoration: underline wavy'>$1</tspan>")
                ;
@@ -449,28 +449,28 @@
             let tooltip = "";
             switch (color_id) {
                case "c0":
-                  tooltip = "Background";
+                  tooltip = "c0: Background";
                   break;
                case "c1":
-                  tooltip = "Foreground, Operators";
+                  tooltip = "c1: Foreground, Operators";
                   break;
                case "c2":
-                  tooltip = "Types";
+                  tooltip = "c2: Types";
                   break;
                case "c3":
-                  tooltip = "Procedures, Keywords";
+                  tooltip = "c3: Procedures, Keywords";
                   break;
                case "c4":
-                  tooltip = "Constants, Strings";
+                  tooltip = "c4: Constants, Strings";
                   break;
                case "c5":
-                  tooltip = "Pre-Processor, Special";
+                  tooltip = "c5: Pre-Processor, Special";
                   break;
                case "c6":
-                  tooltip = "Errors";
+                  tooltip = "c6: Errors";
                   break;
                case "c7":
-                  tooltip = "Comments";
+                  tooltip = "c7: Comments";
                   break;
             }
 

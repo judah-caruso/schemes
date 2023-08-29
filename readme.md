@@ -73,6 +73,7 @@ and click on your preferred editor.
 ![nordic](previews/nordic.svg)
 ![pale](previews/pale.svg)
 ![andromeda](previews/andromeda.svg)
+![clean](previews/clean.svg)
 ![sublunary](previews/sublunary.svg)
 ![one](previews/one.svg)
 ![hub-dim](previews/hub-dim.svg)
@@ -127,7 +128,7 @@ color schemes should be as well.
 
 ## Contributing
 
-If you've created a new scheme, simply add it to the `Previews` section of 
+If you've created a new scheme, simply add it to the `Previews` section of
 this file (following the same format) and submit a pull request.
 
 As this project is new, ideas are also welcome.

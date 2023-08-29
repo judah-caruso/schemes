@@ -72,8 +72,8 @@ local scheme = {
 }
 
 style.background     = scheme.c0
-style.background2    = scheme.c0 
-style.background3    = scheme.c0 
+style.background2    = scheme.c0
+style.background3    = scheme.c0
 style.text           = scheme.c1
 style.caret          = scheme.c1
 style.accent         = scheme.c3
