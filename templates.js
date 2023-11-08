@@ -35,7 +35,7 @@ const templates = {
         },
         {
             "name":       "Procedures, Keywords",
-            "scope":      "entity.name.function, keyword, keyword.declaration.type",
+            "scope":      "entity.name.function, keyword, keyword.declaration.type, variable.function",
             "foreground": "var(c3)",
         },
         {
