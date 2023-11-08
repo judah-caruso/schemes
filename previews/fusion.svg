@@ -1,15 +1,15 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
    <title>Fusion</title>
-   <version>2</version>
+   <version>1</version>
    <style>
       #c0 { fill: #1D1F21; } <!-- Background -->
-      #c1 { fill: #C5C8C6; } <!-- Foreground, Operators --> 
-      #c2 { fill: #DE935F; } <!-- Types --> 
-      #c3 { fill: #c5c8c6; } <!-- Procedures, Keywords --> 
+      #c1 { fill: #C5C8C6; } <!-- Foreground, Operators -->
+      #c2 { fill: #DE935F; } <!-- Types -->
+      #c3 { fill: #c5c8c6; } <!-- Procedures, Keywords -->
       #c4 { fill: #B5BD68; } <!-- Constants, Strings -->
       #c5 { fill: #8ABEB7; } <!-- Pre-Processor, Special -->
       #c6 { fill: #CC6666; } <!-- Errors -->
-      #c7 { fill: #707880; } <!-- Comments --> 
+      #c7 { fill: #707880; } <!-- Comments -->
    </style>
    <!-- Language Preview -->
    <rect width="288px" height="140px" rx="10px" id="c0"></rect>

@@ -1,6 +1,6 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
    <title>Sublunary</title>
-   <version>2</version>
+   <version>1</version>
    <style>
       #c0 { fill: #242C38; } <!-- Background -->
       #c1 { fill: #D1D1D1; } <!-- Foreground, Operators -->

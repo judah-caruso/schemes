@@ -1,15 +1,15 @@
 <svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
    <title>EY</title>
-   <version>2</version>
+   <version>1</version>
    <style>
       #c0 { fill: #181F20; } <!-- Background -->
-      #c1 { fill: #B3A59A; } <!-- Foreground, Operators --> 
-      #c2 { fill: #609F7D; } <!-- Types --> 
-      #c3 { fill: #B3A59A; } <!-- Procedures, Keywords --> 
+      #c1 { fill: #B3A59A; } <!-- Foreground, Operators -->
+      #c2 { fill: #609F7D; } <!-- Types -->
+      #c3 { fill: #B3A59A; } <!-- Procedures, Keywords -->
       #c4 { fill: #609F7D; } <!-- Constants, Strings -->
       #c5 { fill: #b3a59a; } <!-- Pre-Processor, Special -->
       #c6 { fill: #C76B6B; } <!-- Errors -->
-      #c7 { fill: #595959; } <!-- Comments --> 
+      #c7 { fill: #595959; } <!-- Comments -->
    </style>
    <!-- Language Preview -->
    <rect width="288px" height="140px" rx="10px" id="c0"></rect>
