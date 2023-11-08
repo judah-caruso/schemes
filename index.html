@@ -236,6 +236,7 @@
          const type_regex      = new RegExp(`\\b(${def.types.join("|")})\\b`, "g");
          const keyword_regex   = new RegExp(`\\b(${def.keywords.join("|")})\\b`, "g");
          const directive_regex = new RegExp(`(${def.directives.join("|")})`, "g");
+         const function_regex  = new RegExp(`\\b(${def.functions.join("|")})\\b`, "g");
          const comment_regex   = new RegExp(`([${def.comment}]{${def.comment.length}}.*$)`, "g");
          const number_regex    = new RegExp(`(\\b([0-9]*[.])?[0-9]+([f])?)`, "g");
          const escape_regex    = new RegExp("(\\\\[nrtv])", "g");
@@ -283,6 +284,9 @@
 
             if (def.keywords.length > 0)
                line = line.replace(keyword_regex, `<tspan id='c3'>$1</tspan>`);
+
+            if (def.functions.length > 0)
+               line = line.replace(function_regex, `<tspan id='c3'>$1</tspan>`);
 
             if (def.types.length > 0)
                line = line.replace(type_regex, `<tspan id='c2'>$1</tspan>`);
