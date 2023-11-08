@@ -92,6 +92,7 @@ and click on your preferred editor.
 ![minimal-dark](previews/minimal-dark.svg)
 ![blue-in-green](previews/blue-in-green.svg)
 ![redline](previews/redline.svg)
+![lawn](previews/lawn.svg)
 
 
 ## Ecosystem

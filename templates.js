@@ -11,22 +11,22 @@ const templates = {
     },
     "globals":
     {
-        "background":    "var(c0)",
-        "foreground":    "var(c1)",
-        "caret":         "var(c1)",
-        "block_caret":   "color(var(c1) alpha(0.20))",
-        "selection":     "color(var(c1) alpha(0.20))",
-        "misspelling":   "var(c6)",
-        "line_highlight: "#00000000",
-        "shadow":        "#00000000",
-        "shadow_width":  "1",
+        "background":     "var(c0)",
+        "foreground":     "var(c1)",
+        "caret":          "var(c1)",
+        "block_caret":    "color(var(c1) alpha(0.20))",
+        "selection":      "color(var(c1) alpha(0.20))",
+        "misspelling":    "var(c6)",
+        "line_highlight": "#00000000",
+        "shadow":         "#00000000",
+        "shadow_width":   "1",
     },
     "rules":
     [
         {
-            "name":      "Operators",
-            "scope":     "keyword.operator",
-            "foreground: "var(c1)",
+            "name":       "Operators",
+            "scope":      "keyword.operator",
+            "foreground": "var(c1)",
         },
         {
             "name":       "Types",
