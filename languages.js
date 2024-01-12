@@ -93,12 +93,13 @@ end
 `
 package main
 \t
+import "core:fmt"
+\t
 Point :: struct { x: f32, y: f32 }
 \t
 main :: proc() {
-\tpoint := \\uPoin{ 10, 20 }
-\tprint("Hello, World\\n")
-} // This is a comment
+\tfmt.printf("Hellope, {}", \\uPoin{ 10, 20 })
+}
 `,
 
    py:
@@ -191,8 +192,8 @@ const languages = {
    go: {
       name: "Go",
       preview: previews.go,
-      keywords: [ "type", "func", "package", "struct" ],
-      types: [ "float32" ],
+      keywords: [ "type", "func", "package"],
+      types: [ "float32", "struct" ],
       directives: [ "import" ],
       functions: [ "Printf" ],
       operators: [],
@@ -235,8 +236,8 @@ const languages = {
    odin: {
       name: "Odin",
       preview: previews.odin,
-      keywords: [ "struct", "package", "import" ],
-      types: [ "f32" ],
+      keywords: [ "package", "import" ],
+      types: [ "f32", "proc", "struct", "Point" ],
       directives: [ ],
       functions: [ "printf" ],
       operators: [ "=" ],
