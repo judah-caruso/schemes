@@ -50,6 +50,16 @@
          visibility: hidden;
       }
 
+      #typer {
+         position:         absolute;
+         width:            0;
+         height:           0;
+         visibility:       hidden;
+         background-color: #242424;
+         color:            white;
+         border:           0;
+      }
+
       #editor {
          display:               grid;
          grid-template-columns: repeat(4, 1fr);
@@ -101,6 +111,7 @@
          <button onclick="update_language('jai')">Jai</button>
          <button onclick="update_language('js')">JavaScript</button>
          <button onclick="update_language('lua')">Lua</button>
+         <button onclick="update_language('odin')">Odin</button>
          <button onclick="update_language('py')">Python</button>
          <button onclick="update_language('rust')">Rust</button>
          <button onclick="update_language('scheme')">Scheme</button>
@@ -277,7 +288,7 @@
                .replace(string_regex,    "<tspan id='c4'>$1</tspan>")
                .replace(main_regex,      "<tspan id='c3'>$1</tspan>")
                .replace(underline_regex, "<tspan id='c6' style='text-decoration: underline wavy'>$1</tspan>")
-               ;
+            ;
 
             if (def.directives.length > 0)
                line = line.replace(directive_regex, `<tspan id='c5'>$1</tspan>`);
@@ -322,11 +333,27 @@
 
       const copy_to_clipboard = (type, text) => {
          try {
-            navigator.clipboard.writeText(text).then(() => {
-               let str = `Copied ${type} to clipboard!`;
-               alert(str);
-               console.log(str);
-            });
+            if (navigator.clipboard && window.isSecureContext) {
+               navigator.clipboard.writeText(text).then(() => {
+                  console.log(str);
+               });
+            }
+            else {
+               const area = document.createElement("textarea");
+               area.value = text;
+
+               area.style.left     = "-999999px";
+               area.style.position = "absolute";
+
+               document.body.prepend(area);
+               area.select();
+
+               document.execCommand("copy");
+               area.remove();
+            }
+
+            let str = `Copied ${type} to clipboard!`;
+            alert(str);
          } catch (err) {
             console.error("Unable to copy scheme to clipboard: ", err);
             console.log("What was saved: ", text);
@@ -429,6 +456,9 @@
       }, false);
 
       let picker;
+      let typer;
+      let typer_buf = "";
+
       let last_clicked;
 
       // Initialize editor and rest of page
@@ -444,6 +474,27 @@
             event.preventDefault();
             update_scheme_from_theme();
          })
+
+         typer = document.createElement("input");
+         typer.setAttribute("type", "textarea");
+         typer.setAttribute("id", "typer");
+         typer.addEventListener("keydown", (event) => {
+            if (event.key == "Enter" && typer.value.length > 0) {
+               event.preventDefault();
+
+               modify_color(last_clicked, typer.value);
+
+               typer.value = "";
+               typer.style.setProperty("visibility", "hidden");
+            }
+         });
+
+         document.addEventListener("click", (event) => {
+            if (event.target.id != "typer") {
+               typer.value = "";
+               typer.style.setProperty("visibility", "hidden");
+            }
+         });
 
          for (let color_id in theme_colors) {
             let element = document.createElement("span");
@@ -479,6 +530,21 @@
             }
 
             element.setAttribute("title", tooltip);
+            element.addEventListener("contextmenu", (event) => {
+               event.preventDefault();
+
+               last_clicked = color_id;
+               typer.style.setProperty("top",  `${event.y}px`);
+               typer.style.setProperty("left", `${event.x}px`);
+               typer.style.setProperty("width", "125px");
+               typer.style.setProperty("height", "25px");
+               typer.style.setProperty("visibility", "visible");
+
+               typer.value = theme_colors[color_id];
+
+               typer.focus();
+            });
+
             element.addEventListener("click", (event) => {
                last_clicked = color_id;
                picker.style.setProperty("top" , `${event.y}px`);
@@ -491,6 +557,7 @@
          }
 
          document.body.appendChild(picker);
+         document.body.appendChild(typer);
 
          update_language('go');
 

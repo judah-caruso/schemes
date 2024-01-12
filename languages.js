@@ -89,6 +89,18 @@ end
 \\umian()
 `,
 
+   odin:
+`
+package main
+\t
+Point :: struct { x: f32, y: f32 }
+\t
+main :: proc() {
+\tpoint := \\uPoin{ 10, 20 }
+\tprint("Hello, World\\n")
+} // This is a comment
+`,
+
    py:
 `
 from math import *
@@ -179,8 +191,8 @@ const languages = {
    go: {
       name: "Go",
       preview: previews.go,
-      keywords: [ "type", "func", "package" ],
-      types: [ "float32", "struct"  ],
+      keywords: [ "type", "func", "package", "struct" ],
+      types: [ "float32" ],
       directives: [ "import" ],
       functions: [ "Printf" ],
       operators: [],
@@ -190,8 +202,8 @@ const languages = {
    jai: {
       name: "Jai",
       preview: previews.jai,
-      keywords: [ "float" ],
-      types: [ "struct" ],
+      keywords: [ "struct" ],
+      types: [ "float" ],
       directives: [ "\\#import" ],
       functions: [ "print" ],
       operators: [],
@@ -219,6 +231,17 @@ const languages = {
       operators: [ "=", "<=" ],
       strings: [ ['"', '"'] ],
       comment: "--",
+   },
+   odin: {
+      name: "Odin",
+      preview: previews.odin,
+      keywords: [ "struct", "package", "import" ],
+      types: [ "f32" ],
+      directives: [ ],
+      functions: [ "printf" ],
+      operators: [ "=" ],
+      strings: [ ['"', '"'] ],
+      comment: "//",
    },
    py: {
       name: "Python",
