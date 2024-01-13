@@ -91,6 +91,7 @@ and click on your preferred editor.
 ![spice](previews/spice.svg)
 ![minimal-dark](previews/minimal-dark.svg)
 ![blue-in-green](previews/blue-in-green.svg)
+![temporary-variable](previews/temporary-variable.svg)
 ![redline](previews/redline.svg)
 ![lawn](previews/lawn.svg)
 
