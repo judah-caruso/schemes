@@ -89,6 +89,19 @@ end
 \\umian()
 `,
 
+   odin:
+`
+package main
+\t
+import "core:fmt"
+\t
+Point :: struct { x: f32, y: f32 }
+\t
+main :: proc() {
+\tfmt.printf("Hellope, {}", \\uPoin{ 10, 20 })
+}
+`,
+
    py:
 `
 from math import *
@@ -179,8 +192,8 @@ const languages = {
    go: {
       name: "Go",
       preview: previews.go,
-      keywords: [ "type", "func", "package" ],
-      types: [ "float32", "struct"  ],
+      keywords: [ "type", "func", "package"],
+      types: [ "float32", "struct" ],
       directives: [ "import" ],
       functions: [ "Printf" ],
       operators: [],
@@ -190,8 +203,8 @@ const languages = {
    jai: {
       name: "Jai",
       preview: previews.jai,
-      keywords: [ "float" ],
-      types: [ "struct" ],
+      keywords: [ "struct" ],
+      types: [ "float" ],
       directives: [ "\\#import" ],
       functions: [ "print" ],
       operators: [],
@@ -219,6 +232,17 @@ const languages = {
       operators: [ "=", "<=" ],
       strings: [ ['"', '"'] ],
       comment: "--",
+   },
+   odin: {
+      name: "Odin",
+      preview: previews.odin,
+      keywords: [ "package", "import" ],
+      types: [ "f32", "proc", "struct", "Point" ],
+      directives: [ ],
+      functions: [ "printf" ],
+      operators: [ "=" ],
+      strings: [ ['"', '"'] ],
+      comment: "//",
    },
    py: {
       name: "Python",
