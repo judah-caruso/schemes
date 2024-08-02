@@ -6,8 +6,8 @@ typedef struct { float x, y; } Point;
 \t
 int main(int argc, char **argv) {
 \tPoint p = (Point){ .x=\\u10g, .y=20f };
-\treturn 0; // This is a comment
-}`,
+\treturn 0;
+} /* C */`,
 
    cpp:
 `#include "iostream"
@@ -17,7 +17,7 @@ int main(int c, char *v[]) {
 \tfor (auto &arg : \\uarg )
 \t\tcout << quoted(arg) << "\\n";
 \treturn 0;
-}`,
+} // C++`,
 
    go:
 `import "fmt"
@@ -27,7 +27,7 @@ type Point struct { X, Y float32 }
 func main() {
 \tp := Point{ \\ux: 10, Y: 30 }
 \tfmt.Printf("Point %v\\n", p)
-} // This is a comment`,
+} // Go`,
 
    js:
 `import { serve } from "server.js";
@@ -37,7 +37,7 @@ const config = { port: 8080 };
 serve((request) => {
 \tlet res = new Response("Hello!\\n");
 \treturn \\urse;
-}, config); // This is a comment`,
+}, config); // JavaScript`,
 
    lua:
 `function main()
@@ -47,7 +47,7 @@ serve((request) => {
 \tend
 end
 \t
-\\umian() -- This is a comment`,
+\\umian() -- Lua`,
 
    odin:
 `package main
@@ -57,27 +57,27 @@ import "core:fmt"
 main :: proc() {
 \tp := [2]f32{ 1, 2 } * 2
 \t\\ufm.printf("Hellope!")
-} // This is a comment`,
+} // Odin`,
 
    py:
 `from math import *
 \t
-class Point: # This is a comment
+class Point:
 \tx, y = None, \\uNon
 \t
 \tdef __init__(self, x, y):
 \t\tself.x, self.y = x, y
-\t\tprint("hello, world")`,
+\t\tprint("hello, world") # Python`,
 
    rust:
 `#[derive(Debug)]
 struct Point { x: f32, y: f32 }
 \t
 fn main() {
-\tlet mut point = Point{ x: 10.0, y: 20.0 };
-\tpoint.x += 1.0;
-\tprintln!("{:?}", \\upoin);
-} // This is a comment`,
+\tlet mut p = \\uPoin{ x: 10.0, y: 20.0 };
+\tp.x += 1.0;
+\tprintln!("{:?}", p);
+} // Rust`,
 
    scheme:
 `(defn (main [args]
@@ -87,17 +87,17 @@ fn main() {
 \t\t\t(car point) (cdr point))
 \t\t(\\unwline)))
 \t
-(main '()) ; This is a comment`,
+(main '()) ; Scheme`,
 
    zig:
 `const std = @import("std");
 \t
-const Point = struct { x: f32, y: f32 };
+const Point = struct { x, y: f32 };
 \t
 pub fn main() void {
 \tconst p = Point{ .x = 10, .y = 20 };
 \tstd.debug.\\uprin("{}\\n", .{ p });
-} // This is a comment`,
+} // Zig`,
 };
 
 const languages = {
@@ -108,9 +108,9 @@ const languages = {
       types: [ "int", "char", "float", "struct" ],
       directives: [ "\\#include" ],
       functions: [],
-      operators: [ "*" ],
+      operators: [ "\\*", "\\=" ],
       strings: [ ['"', '"'], [ "<", ">" ] ],
-      comment: "//",
+      comment: "\\/\\*",
    },
    cpp: {
       name: "C++",
@@ -119,8 +119,8 @@ const languages = {
       types: [ "int", "char", "auto" ],
       directives: [ "\\#include" ],
       functions: [ "quoted" ],
-      operators: [ "*", "+", "&", "<<" ],
-      strings: [ ['"', '"'], [ "<", ">" ] ],
+      operators: [ "\\*", "\\+", "\\&", "\\<\\<<", "\\=" ],
+      strings: [ ['"', '"'] ],
       comment: "//",
    },
    go: {
@@ -130,7 +130,7 @@ const languages = {
       types: [ "float32", "struct" ],
       directives: [ "import" ],
       functions: [ "Printf" ],
-      operators: [],
+      operators: [ "\\=", "\\:\\=" ],
       strings: [ ['"', '"'] ],
       comment: "//",
    },
@@ -141,7 +141,7 @@ const languages = {
       types: [],
       directives: [ "import", "from" ],
       functions: [ "serve" ],
-      operators: [],
+      operators: [ "\\=", "\\=\\>" ],
       strings: [ ['"', '"'] ],
       comment: "//",
    },
@@ -152,7 +152,7 @@ const languages = {
       types: [],
       directives: [],
       functions: [ "print" ],
-      operators: [ "=", "<=" ],
+      operators: [ "\\=", "\\<\\=" ],
       strings: [ ['"', '"'] ],
       comment: "--",
    },
@@ -163,7 +163,7 @@ const languages = {
       types: [ "f32", "proc", "struct", "Point" ],
       directives: [ ],
       functions: [ "printf", "main" ],
-      operators: [ "=", "::" ],
+      operators: [ "\\=", "\\:\\:" ],
       strings: [ ['"', '"'] ],
       comment: "//",
    },
@@ -174,7 +174,7 @@ const languages = {
       types: [ "Point" ],
       directives: [ "from", "import", ],
       functions: [ "__init__", "print" ],
-      operators: [ "*", "=" ],
+      operators: [ "\\*", "\\=" ],
       strings: [ ['"', '"'] ],
       comment: "#",
    },
@@ -185,7 +185,7 @@ const languages = {
       types: [ "struct", "f32" ],
       directives: [ "\\#\\[derive\\(Debug\\)\\]" ],
       functions: [ "println" ],
-      operators: [],
+      operators: [ "\\=" ],
       strings: [ ['"', '"'] ],
       comment: "//",
    },
@@ -207,7 +207,7 @@ const languages = {
       types: [ "void", "f32", "struct" ],
       directives: [ "\\@import" ],
       functions: [ "print" ],
-      operators: [ "!" ],
+      operators: [ "\\!", "\\=" ],
       strings: [ ['"', '"'] ],
       comment: "//",
    },
