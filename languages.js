@@ -1,172 +1,106 @@
 const previews = {
-   eight:
-`
-import "fmt"
-\t
-const Point = struct {
-\tx, y f32
-}
-const main = fn(args []string) void {
-\tmut point = Point{ x: 10, y: 20 }
-\tfmt::print("{}\\n", \\upiont)
-} // This is a comment
-`,
-
    c:
-`
-#include "stdio.h"
-typedef struct {
-\tfloat x, y;
-} Point;
-int main(int argc, char *argv[])
-{
+`#include "stdio.h"
+\t
+typedef struct { float x, y; } Point;
+\t
+int main(int argc, char **argv) {
 \tPoint p = (Point){ .x=\\u10g, .y=20f };
 \treturn 0; // This is a comment
-}
-`,
+}`,
 
    cpp:
-`
-#include "iostream"
-using namespace std;
+`#include "iostream"
 \t
 int main(int c, char *v[]) {
 \tauto args = vector<string>(v, v + c);
 \tfor (auto &arg : \\uarg )
 \t\tcout << quoted(arg) << "\\n";
 \treturn 0;
-}
-`,
+}`,
 
    go:
-`
-import "fmt"
+`import "fmt"
 \t
-type Point struct {
-\tX, Y float32
-}
+type Point struct { X, Y float32 }
+\t
 func main() {
 \tp := Point{ \\ux: 10, Y: 30 }
 \tfmt.Printf("Point %v\\n", p)
-} // This is a comment
-`,
-
-   jai:
-`
-Point :: struct {
-\tx: float;
-\ty: float;
-};
-main :: () {
-\tpoint := Point.{ 10, 20 };
-\tprint("Point %\\n", \\upiont);
-}
-#import "Basic";
-`,
+} // This is a comment`,
 
    js:
-`
-import { serve } from "server.js";
+`import { serve } from "server.js";
 \t
 const config = { port: 8080 };
 \t
 serve((request) => {
 \tlet res = new Response("Hello!\\n");
 \treturn \\urse;
-}, config); // This is a comment
-`,
+}, config); // This is a comment`,
 
    lua:
-`
-function main()
-\t-- This is a comment
+`function main()
 \tlocal point = { x = 10, y = 20 }
 \tif point.x <= 10 then
 \t\tprint("Hello, World\\n")
 \tend
 end
 \t
-\\umian()
-`,
+\\umian() -- This is a comment`,
 
    odin:
-`
-package main
+`package main
 \t
 import "core:fmt"
 \t
-Point :: struct { x: f32, y: f32 }
-\t
 main :: proc() {
-\tfmt.printf("Hellope, {}", \\uPoin{ 10, 20 })
-}
-`,
+\tp := [2]f32{ 1, 2 } * 2
+\t\\ufm.printf("Hellope!")
+} // This is a comment`,
 
    py:
-`
-from math import *
+`from math import *
 \t
 class Point: # This is a comment
-\tx = None
-\ty = \\uNon
+\tx, y = None, \\uNon
 \t
 \tdef __init__(self, x, y):
-\t\tself.x = x
-\t\tself.y = y
-`,
+\t\tself.x, self.y = x, y
+\t\tprint("hello, world")`,
 
    rust:
-`
-#[derive(Debug)]
-struct Point {
-\tx: f32,
-\ty: f32,
-}
+`#[derive(Debug)]
+struct Point { x: f32, y: f32 }
+\t
 fn main() {
-\tlet point = Point{ 10, 20 };
-\tprintln!("{:?}", \\upiont);
-} // This is a comment
-`,
+\tlet mut point = Point{ x: 10.0, y: 20.0 };
+\tpoint.x += 1.0;
+\tprintln!("{:?}", \\upoin);
+} // This is a comment`,
 
    scheme:
-`
-(defn (main [args]
+`(defn (main [args]
 \t(let
 \t\t[point '(10 20)]
 \t\t(display "%d %d"
 \t\t\t(car point) (cdr point))
 \t\t(\\unwline)))
 \t
-; This is a comment
-(main '())
-`,
+(main '()) ; This is a comment`,
 
    zig:
-`
-const std = @import("std");
-const Point = struct {
-\tx: f32,
-\ty: f32,
-};
-pub fn main() !void {
-\tvar p = Point{ .\\uX = 10, .y = 20 };
-\ttry std.debug.print("{}\\n", .{ p });
-}
-`,
+`const std = @import("std");
+\t
+const Point = struct { x: f32, y: f32 };
+\t
+pub fn main() void {
+\tconst p = Point{ .x = 10, .y = 20 };
+\tstd.debug.\\uprin("{}\\n", .{ p });
+} // This is a comment`,
 };
 
 const languages = {
-   eight: {
-      name: "8",
-      preview: previews.eight,
-      keywords: [ "const", "mut", "fn" ],
-      types: [ "struct", "void", "string", "f32" ],
-      directives: [ "import" ],
-      functions: [ "print" ],
-      operators: [],
-      strings: [ ['"', '"'] ],
-      comment: "//",
-   },
    c: {
       name: "C",
       preview: previews.c,
@@ -200,17 +134,6 @@ const languages = {
       strings: [ ['"', '"'] ],
       comment: "//",
    },
-   jai: {
-      name: "Jai",
-      preview: previews.jai,
-      keywords: [ "struct" ],
-      types: [ "float" ],
-      directives: [ "\\#import" ],
-      functions: [ "print" ],
-      operators: [],
-      strings: [ ['"', '"'] ],
-      comment: "//",
-   },
    js: {
       name: "JavaScript",
       preview: previews.js,
@@ -239,19 +162,19 @@ const languages = {
       keywords: [ "package", "import" ],
       types: [ "f32", "proc", "struct", "Point" ],
       directives: [ ],
-      functions: [ "printf" ],
-      operators: [ "=" ],
+      functions: [ "printf", "main" ],
+      operators: [ "=", "::" ],
       strings: [ ['"', '"'] ],
       comment: "//",
    },
    py: {
       name: "Python",
       preview: previews.py,
-      keywords: [ "class", "def" ],
-      types: [],
+      keywords: [ "class", "def", "self" ],
+      types: [ "Point" ],
       directives: [ "from", "import", ],
-      functions: [],
-      operators: [ "*" ],
+      functions: [ "__init__", "print" ],
+      operators: [ "*", "=" ],
       strings: [ ['"', '"'] ],
       comment: "#",
    },
@@ -261,7 +184,7 @@ const languages = {
       keywords: [ "fn", "let" ],
       types: [ "struct", "f32" ],
       directives: [ "\\#\\[derive\\(Debug\\)\\]" ],
-      functions: [ ],
+      functions: [ "println" ],
       operators: [],
       strings: [ ['"', '"'] ],
       comment: "//",
@@ -272,7 +195,7 @@ const languages = {
       keywords: [ "defn", "let", "car", "cdr" ],
       types: [],
       directives: [],
-      functions: [ "display" ],
+      functions: [ "display", "main" ],
       operators: [],
       strings: [ ['"', '"'] ],
       comment: ";",
@@ -280,7 +203,7 @@ const languages = {
    zig: {
       name: "Zig",
       preview: previews.zig,
-      keywords: [ "pub", "fn", "const", "var", "try" ],
+      keywords: [ "pub", "fn", "const", "try" ],
       types: [ "void", "f32", "struct" ],
       directives: [ "\\@import" ],
       functions: [ "print" ],
@@ -289,3 +212,14 @@ const languages = {
       comment: "//",
    },
 };
+
+// Uncomment when testing language preview changes
+// (() => {
+//    Object.keys(languages).forEach((k) => {
+//       const lang = languages[k];
+//       const lines = lang.preview.split('\n');
+//       if (lines.length != 8) {
+//          alert(`Language '${k}' has an invalid preview!`);
+//       }
+//    })
+// })();
