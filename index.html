@@ -56,7 +56,23 @@
          grid-template-rows:    repeat(2, 1fr);
          grid-gap:              3px;
          width:                 220px;
-         margin:                0 auto;
+         margin:                0 auto 20px auto;
+      }
+
+      #id {
+         font-family: monospace;
+         font-size: 0.7em;
+         border: 0;
+         background-color: #00000000;
+         display: block;
+         width: 288px;
+         text-align: center;
+         margin: 0 auto;
+      }
+
+      #id:focus, #id:hover {
+         border: 0;
+         background-color: #00000000;
       }
 
       .github {
@@ -85,6 +101,8 @@
       }
 
       .label {
+         color: #FFF;
+         filter: invert(0.5);
          padding: 2px;
          pointer-events: none;
       }
@@ -93,7 +111,7 @@
 <body id='c0'>
    <main>
       <div id="languages">
-         <span class="label" id="c7">Preview Language</span>
+         <span class="label">Preview Language</span>
          <button onclick="update_language('eight')">8</button>
          <button onclick="update_language('c')">C</button>
          <button onclick="update_language('cpp')">C++</button>
@@ -108,7 +126,7 @@
       </div>
 
       <div id="exports">
-         <span class="label" id="c7">Editor Export</span>
+         <span class="label">Editor Export</span>
          <button onclick="export_theme('lite')">Lite</button>
          <button onclick="export_theme('sublime')">Sublime Text</button>
          <br/>
@@ -138,8 +156,9 @@
          </svg>
       </div>
 
-      <div id="editor">
-      </div>
+      <div id="editor"></div>
+
+      <input type="text" class="label" id="id"/>
    </main>
 
    <script type="text/javascript" src="languages.js"></script>
@@ -148,6 +167,7 @@
       let theme_preview = document.getElementById("preview");
       let theme_svg     = theme_preview.getElementsByTagName("svg")[0];
       let editor        = document.getElementById("editor");
+      let theme_id      = document.getElementById("id");
 
       let theme_colors = {
          c0: "#000",
@@ -181,9 +201,13 @@
          }
 
          let json_str = JSON.stringify(theme_colors);
-
-         console.log("Updating local storage:", json_str);
          localStorage.setItem(storage_id, JSON.stringify(theme_colors));
+
+         theme_id.value = Object
+            .values(theme_colors)
+            .map((c) => c.slice(1))
+            .join("")
+         ;
       }
 
       const update_scheme_from_theme = () => {
@@ -438,6 +462,7 @@
          picker.setAttribute("id", "color-picker");
          picker.addEventListener("input", (event) => {
             modify_color(last_clicked, event.target.value);
+            update_scheme_from_theme();
          })
 
          picker.addEventListener("change", (event) => {
