@@ -1,17 +1,17 @@
-<svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Pale</title>
-   <version>1</version>
-   <style>
-      #c0 { fill: #292D3E; } <!-- Background -->
-      #c1 { fill: #959DCB; } <!-- Foreground, Operators -->
-      #c2 { fill: #89DDFF; } <!-- Types -->
-      #c3 { fill: #82AAFF; } <!-- Procedures, Keywords -->
-      #c4 { fill: #C3E88D; } <!-- Constants, Strings -->
-      #c5 { fill: #C792EA; } <!-- Pre-Processor, Special -->
-      #c6 { fill: #FF0000; } <!-- Errors -->
-      #c7 { fill: #676E95; } <!-- Comments -->
-   </style>
-   <!-- Language Preview -->
-   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
-   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c5">#include</tspan> <tspan id="c3">"iostream"</tspan></tspan><tspan x="5px" y="33px"><tspan id="c3">using</tspan> <tspan id="c3">namespace</tspan> std;</tspan><tspan x="19px" y="47px"></tspan><tspan x="5px" y="61px"><tspan id="c2">int</tspan> <tspan id="c3">main</tspan>(<tspan id="c2">int</tspan> c, <tspan id="c2">char</tspan> <tspan id="c3"><tspan id="c1"></tspan>*<tspan id="c3"></tspan></tspan>v[]) {</tspan><tspan x="19px" y="75px"><tspan id="c2">auto</tspan> args = vector<tspan id="c3"><string></string></tspan>(v, v <tspan id="c3"><tspan id="c1"></tspan>+<tspan id="c3"></tspan></tspan> c);</tspan><tspan x="19px" y="89px"><tspan id="c3">for</tspan> (<tspan id="c2">auto</tspan> <tspan id="c3"><tspan id="c1"></tspan>&amp;<tspan id="c3"></tspan></tspan>arg : <tspan id="c6" style="text-decoration: underline wavy">arg</tspan> )</tspan><tspan x="33px" y="103px">cout <tspan id="c3"><tspan id="c1"></tspan><tspan id="c3">&lt;&lt;</tspan></tspan> quoted(arg) <tspan id="c3"><tspan id="c1"></tspan><tspan id="c3">&lt;&lt;</tspan></tspan> <tspan id="c3">"<tspan id="c5">\n</tspan>"</tspan>;</tspan><tspan x="19px" y="117px"><tspan id="c3">return</tspan> <tspan id="c3"><tspan id="c3"></tspan>0<tspan id="c3"></tspan></tspan>;</tspan><tspan x="5px" y="131px">}</tspan></text>
+<svg width="288px" height="124px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
+	<title>Pale</title>
+	<version>3</version>
+	<style>
+		#c0 { fill: #292D3E; } <!-- Background -->
+		#c1 { fill: #959DCB; } <!-- Foreground, Operators -->
+		#c2 { fill: #89DDFF; } <!-- Types -->
+		#c3 { fill: #82AAFF; } <!-- Procedures, Keywords -->
+		#c4 { fill: #C3E88D; } <!-- Constants, Strings -->
+		#c5 { fill: #C792EA; } <!-- Pre-Processor, Special -->
+		#c6 { fill: #FF0000; } <!-- Errors -->
+		#c7 { fill: #676E95; } <!-- Comments -->
+	</style>
+	<!-- Language Preview -->
+	<rect width="288px" height="124px" rx="10px" id="c0"></rect>
+	<text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c3">function</tspan> <tspan id="c3">main</tspan>()</tspan><tspan x="19px" y="33px"><tspan id="c3">local</tspan> point = { x = <tspan id="c4">10</tspan>, y = <tspan id="c4">20</tspan> }</tspan><tspan x="19px" y="47px"><tspan id="c3">if</tspan> point.x &lt;= <tspan id="c4">10</tspan> <tspan id="c3">then</tspan></tspan><tspan x="33px" y="61px"><tspan id="c3">print</tspan>(<tspan id="c4">"Hello, World<tspan id="c5">\n</tspan>"</tspan>)</tspan><tspan x="19px" y="75px"><tspan id="c3">end</tspan></tspan><tspan x="5px" y="89px"><tspan id="c3">end</tspan></tspan><tspan x="19px" y="103px"></tspan><tspan x="5px" y="117px"><tspan id="c6" style="text-decoration: underline wavy">mian</tspan>() <tspan id="c7">-- Lua</tspan></tspan></text>
 </svg>

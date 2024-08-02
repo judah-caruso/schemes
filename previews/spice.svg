@@ -1,17 +1,17 @@
-<svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Spice</title>
-   <version>1</version>
-   <style>
-      #c0 { fill: #0C0C0C; } <!-- Background -->
-      #c1 { fill: #BAB5AB; } <!-- Foreground, Operators -->
-      #c2 { fill: #BC795C; } <!-- Types -->
-      #c3 { fill: #BCBCBC; } <!-- Procedures, Keywords -->
-      #c4 { fill: #BC795C; } <!-- Constants, Strings -->
-      #c5 { fill: #585858; } <!-- Pre-Processor, Special -->
-      #c6 { fill: #8A8A8A; } <!-- Errors -->
-      #c7 { fill: #585858; } <!-- Comments -->
-   </style>
-   <!-- Language Preview -->
-   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
-   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c3">function</tspan> <tspan id="c3">main</tspan>()</tspan><tspan x="19px" y="33px"><tspan id="c7">-- This is a comment</tspan></tspan><tspan x="19px" y="47px"><tspan id="c3">local</tspan> point <tspan id="c1">=</tspan> { x <tspan id="c1">=</tspan> <tspan id="c3">10</tspan>, y <tspan id="c1">=</tspan> <tspan id="c3">20</tspan> }</tspan><tspan x="19px" y="61px"><tspan id="c3">if</tspan> point.x <tspan id="c1">&lt;=</tspan> <tspan id="c3">10</tspan> <tspan id="c3">then</tspan></tspan><tspan x="33px" y="75px">print(<tspan id="c3">"Hello, World<tspan id="c5">\n</tspan>"</tspan>)</tspan><tspan x="19px" y="89px"><tspan id="c3">end</tspan></tspan><tspan x="5px" y="103px"><tspan id="c3">end</tspan></tspan><tspan x="19px" y="117px"></tspan><tspan x="5px" y="131px"><tspan id="c6" style="text-decoration: underline wavy">mian</tspan>()</tspan></text>
+<svg width="288px" height="124px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
+	<title>Spice</title>
+	<version>3</version>
+	<style>
+		#c0 { fill: #0C0C0C; } <!-- Background -->
+		#c1 { fill: #BAB5AB; } <!-- Foreground, Operators -->
+		#c2 { fill: #BC795C; } <!-- Types -->
+		#c3 { fill: #BCBCBC; } <!-- Procedures, Keywords -->
+		#c4 { fill: #BC795C; } <!-- Constants, Strings -->
+		#c5 { fill: #585858; } <!-- Pre-Processor, Special -->
+		#c6 { fill: #8A8A8A; } <!-- Errors -->
+		#c7 { fill: #585858; } <!-- Comments -->
+	</style>
+	<!-- Language Preview -->
+	<rect width="288px" height="124px" rx="10px" id="c0"></rect>
+	<text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c5">#include</tspan> <tspan id="c4">"stdio.h"</tspan></tspan><tspan x="19px" y="33px"></tspan><tspan x="5px" y="47px"><tspan id="c3">typedef</tspan> <tspan id="c2">struct</tspan> { <tspan id="c2">float</tspan> x, y; } Point;</tspan><tspan x="19px" y="61px"></tspan><tspan x="5px" y="75px"><tspan id="c2">int</tspan> <tspan id="c3">main</tspan>(<tspan id="c2">int</tspan> argc, <tspan id="c2">char</tspan> **argv) {</tspan><tspan x="19px" y="89px">Point p = (Point){ .x=<tspan id="c6" style="text-decoration: underline wavy">10g</tspan>, .y=<tspan id="c4"><tspan id="c4"></tspan>20f<tspan id="c4"></tspan></tspan> };</tspan><tspan x="19px" y="103px"><tspan id="c3">return</tspan> <tspan id="c4"><tspan id="c4"></tspan>0<tspan id="c4"></tspan></tspan>;</tspan><tspan x="5px" y="117px">} <tspan id="c7">/* C */</tspan></tspan></text>
 </svg>

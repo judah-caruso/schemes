@@ -1,17 +1,17 @@
-<svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Fusion</title>
-   <version>1</version>
-   <style>
-      #c0 { fill: #1D1F21; } <!-- Background -->
-      #c1 { fill: #C5C8C6; } <!-- Foreground, Operators -->
-      #c2 { fill: #DE935F; } <!-- Types -->
-      #c3 { fill: #c5c8c6; } <!-- Procedures, Keywords -->
-      #c4 { fill: #B5BD68; } <!-- Constants, Strings -->
-      #c5 { fill: #8ABEB7; } <!-- Pre-Processor, Special -->
-      #c6 { fill: #CC6666; } <!-- Errors -->
-      #c7 { fill: #707880; } <!-- Comments -->
-   </style>
-   <!-- Language Preview -->
-   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
-   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c5">#include</tspan> <tspan id="c3">"stdio.h"</tspan></tspan><tspan x="5px" y="33px"><tspan id="c3">typedef</tspan> <tspan id="c2">struct</tspan> {</tspan><tspan x="19px" y="47px"><tspan id="c2">float</tspan> x, y;</tspan><tspan x="5px" y="61px">} Point;</tspan><tspan x="5px" y="75px"><tspan id="c2">int</tspan> <tspan id="c3">main</tspan>(<tspan id="c2">int</tspan> argc, <tspan id="c2">char</tspan> <tspan id="c3"><tspan id="c1"></tspan>*<tspan id="c3"></tspan></tspan>argv[])</tspan><tspan x="5px" y="89px">{</tspan><tspan x="19px" y="103px">Point p = (Point){ .x=<tspan id="c6" style="text-decoration: underline wavy">10g</tspan>, .y=<tspan id="c3"><tspan id="c3"></tspan>20f<tspan id="c3"></tspan></tspan> };</tspan><tspan x="19px" y="117px"><tspan id="c3">return</tspan> <tspan id="c3"><tspan id="c3"></tspan>0<tspan id="c3"></tspan></tspan>; <tspan id="c7">// This is a comment</tspan></tspan><tspan x="5px" y="131px">}</tspan></text>
+<svg width="288px" height="124px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
+	<title>Fusion</title>
+	<version>3</version>
+	<style>
+		#c0 { fill: #1D1F21; } <!-- Background -->
+		#c1 { fill: #C5C8C6; } <!-- Foreground, Operators -->
+		#c2 { fill: #DE935F; } <!-- Types -->
+		#c3 { fill: #c5c8c6; } <!-- Procedures, Keywords -->
+		#c4 { fill: #B5BD68; } <!-- Constants, Strings -->
+		#c5 { fill: #8ABEB7; } <!-- Pre-Processor, Special -->
+		#c6 { fill: #CC6666; } <!-- Errors -->
+		#c7 { fill: #707880; } <!-- Comments -->
+	</style>
+	<!-- Language Preview -->
+	<rect width="288px" height="124px" rx="10px" id="c0"></rect>
+	<text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c3">const</tspan> std = <tspan id="c5">@import</tspan>(<tspan id="c4">"std"</tspan>);</tspan><tspan x="19px" y="33px"></tspan><tspan x="5px" y="47px"><tspan id="c3">const</tspan> Point = <tspan id="c2">struct</tspan> { x, y: <tspan id="c2">f32</tspan> };</tspan><tspan x="19px" y="61px"></tspan><tspan x="5px" y="75px"><tspan id="c3">pub</tspan> <tspan id="c3">fn</tspan> <tspan id="c3">main</tspan>() <tspan id="c2">void</tspan> {</tspan><tspan x="19px" y="89px"><tspan id="c3">const</tspan> p = Point{ .x = <tspan id="c4">10</tspan>, .y = <tspan id="c4">20</tspan> };</tspan><tspan x="19px" y="103px">std.debug.<tspan id="c6" style="text-decoration: underline wavy">prin</tspan>(<tspan id="c4">"{}<tspan id="c5">\n</tspan>"</tspan>, .{ p });</tspan><tspan x="5px" y="117px">} <tspan id="c7">// Zig</tspan></tspan></text>
 </svg>

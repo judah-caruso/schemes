@@ -1,17 +1,17 @@
-<svg width="288px" height="140px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <title>Hub Dark</title>
-   <version>1</version>
-   <style>
-      #c0 { fill: #0D1118; } <!-- Background -->
-      #c1 { fill: #C9D1D9; } <!-- Foreground, Operators -->
-      #c2 { fill: #FF7B72; } <!-- Types -->
-      #c3 { fill: #D2A8FF; } <!-- Procedures, Keywords -->
-      #c4 { fill: #A5D6FF; } <!-- Constants, Strings -->
-      #c5 { fill: #FF7B72; } <!-- Pre-Processor, Special -->
-      #c6 { fill: #FFA657; } <!-- Errors -->
-      #c7 { fill: #8b949e; } <!-- Comments -->
-   </style>
-   <!-- Language Preview -->
-   <rect width="288px" height="140px" rx="10px" id="c0"></rect>
-   <text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px">Point :: <tspan id="c2">struct</tspan> {</tspan><tspan x="19px" y="33px">x: <tspan id="c3">float</tspan>;</tspan><tspan x="19px" y="47px">y: <tspan id="c3">float</tspan>;</tspan><tspan x="5px" y="61px">};</tspan><tspan x="5px" y="75px"><tspan id="c3">main</tspan> :: () {</tspan><tspan x="19px" y="89px">point := Point.{ <tspan id="c3">10</tspan>, <tspan id="c3">20</tspan> };</tspan><tspan x="19px" y="103px">print(<tspan id="c3">"Point %<tspan id="c5">\n</tspan>"</tspan>, <tspan id="c6" style="text-decoration: underline wavy">piont</tspan>);</tspan><tspan x="5px" y="117px">}</tspan><tspan x="5px" y="131px"><tspan id="c5">#import</tspan> <tspan id="c3">"Basic"</tspan>;</tspan></text>
+<svg width="288px" height="124px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
+	<title>Hub Dark</title>
+	<version>3</version>
+	<style>
+		#c0 { fill: #0D1118; } <!-- Background -->
+		#c1 { fill: #C9D1D9; } <!-- Foreground, Operators -->
+		#c2 { fill: #FF7B72; } <!-- Types -->
+		#c3 { fill: #D2A8FF; } <!-- Procedures, Keywords -->
+		#c4 { fill: #A5D6FF; } <!-- Constants, Strings -->
+		#c5 { fill: #FF7B72; } <!-- Pre-Processor, Special -->
+		#c6 { fill: #FFA657; } <!-- Errors -->
+		#c7 { fill: #8b949e; } <!-- Comments -->
+	</style>
+	<!-- Language Preview -->
+	<rect width="288px" height="124px" rx="10px" id="c0"></rect>
+	<text style="font-family:ui-monospace,monospace;font-size: 12px;font-weight:400;" id="c1"><tspan x="5px" y="19px"><tspan id="c5">import</tspan> <tspan id="c4">"fmt"</tspan></tspan><tspan x="19px" y="33px"></tspan><tspan x="5px" y="47px"><tspan id="c3">type</tspan> Point <tspan id="c2">struct</tspan> { X, Y <tspan id="c2">float32</tspan> }</tspan><tspan x="19px" y="61px"></tspan><tspan x="5px" y="75px"><tspan id="c3">func</tspan> <tspan id="c3">main</tspan>() {</tspan><tspan x="19px" y="89px">p := Point{ <tspan id="c6" style="text-decoration: underline wavy">x</tspan>: <tspan id="c4">10</tspan>, Y: <tspan id="c4">30</tspan> }</tspan><tspan x="19px" y="103px">fmt.<tspan id="c3">Printf</tspan>(<tspan id="c4">"Point %v<tspan id="c5">\n</tspan>"</tspan>, p)</tspan><tspan x="5px" y="117px">} <tspan id="c7">// Go</tspan></tspan></text>
 </svg>
